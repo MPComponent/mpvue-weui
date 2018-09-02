@@ -1,4 +1,8 @@
-<p align="center"><img width="300" src="https://github.com/MPComponent/mpvue-weui/blob/master/docs/logo/logo.png" alt="mpvue-weui logo"></p>
+<p align="center">
+  <a href="https://github.com/MPComponent/mpvue-weui">
+    <img width="300" src="https://github.com/MPComponent/mpvue-weui/blob/master/docs/logo/logo.png" alt="mpvue-weui logo">
+  </a>
+</p>
 
 
 # mpvue-weui
