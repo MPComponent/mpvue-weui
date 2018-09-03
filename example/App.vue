@@ -13,6 +13,12 @@ export default {
 .mb15 {
   margin-bottom: 15px;
 }
+.ml15 {
+  margin-left: 15px;
+}
+.mr15 {
+  margin-right: 15px;
+}
 .page__hd {
   padding: 40px;
 }

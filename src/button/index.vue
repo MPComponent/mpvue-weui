@@ -1,5 +1,5 @@
 <template>
-  <button :class="buttonClass" :type="type" :plain="plain" :disabled="disabled">
+  <button :class="buttonClass" :type="type" :plain="plain" :disabled="disabled" :loading="loading" :open-type="openType">
     <slot></slot>
   </button>
 </template>
@@ -24,8 +24,16 @@ export default {
       default: false
     },
     btnClass: {
-      type: Array,
+      type: String,
       default: false
+    },
+    loading: {
+      type: Boolean,
+      default: false
+    },
+    openType: {
+      type: String,
+      default: ''
     }
   },
   computed: {
@@ -48,7 +56,7 @@ export default {
   height: 44px;
   line-height: 44px;
   padding: 0 15px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .weui-btn-small {
   height: 30px;
