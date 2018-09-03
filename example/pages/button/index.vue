@@ -1,7 +1,7 @@
 <template>
   <page-content>
     <div class="button-content">
-      <mp-button type="default" size="large" btnClass="mb15">默认按钮</mp-button>
+      <mp-button type="default" size="large" btnClass="mb15" openType="getUserInfo" @getuserinfo="getuserinfo">默认按钮</mp-button>
       <mp-button type="primary" size="large" btnClass="mb15">主要按钮</mp-button>
       <mp-button type="warn" size="large" btnClass="mb15">警告按钮</mp-button>
       <mp-button type="defualt" size="normal" btnClass="mb15 mr15" plain>默认按钮</mp-button>
@@ -24,6 +24,11 @@ export default {
   components: {
     mpButton,
     pageContent
+  },
+  methods: {
+    getuserinfo(e) {
+      console.log(e);
+    }
   }
 };
 </script>

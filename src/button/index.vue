@@ -1,5 +1,5 @@
 <template>
-  <button :class="buttonClass" :type="type" :plain="plain" :disabled="disabled" :loading="loading" :open-type="openType">
+  <button :class="buttonClass" :type="type" :plain="plain" :disabled="disabled" :loading="loading" :open-type="openType" :app-parameter="appParameter" :hover-start-time="hoverStartTime" :hover-stay-time="hoverStayTime" :lang="lang" :session-from="sessionFrom" :send-message-title="sendMessageTitle" :send-message-path="sendMessagePath" :send-message-img="sendMessageImg" :show-message-card="showMessageCard" @click="click" @getuserinfo="getuserinfo">
     <slot></slot>
   </button>
 </template>
@@ -34,12 +34,56 @@ export default {
     openType: {
       type: String,
       default: ''
+    },
+    appParameter: {
+      type: String,
+      default: ''
+    },
+    hoverStartTime: {
+      type: Number,
+      default: 20
+    },
+    hoverStayTime: {
+      type: Number,
+      default: 70
+    },
+    lang: {
+      type: String,
+      default: 'en'
+    },
+    sessionFrom: {
+      type: String,
+      default: ''
+    },
+    sendMessageTitle: {
+      type: String,
+      default: 'sendMessageTitle'
+    },
+    sendMessagePath: {
+      type: String,
+      default: ''
+    },
+    sendMessageImg: {
+      type: String,
+      default: ''
+    },
+    showMessageCard: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
     buttonClass() {
       let buttonClass = `weui-btn weui-btn-${this.size} ${this.btnClass}`;
       return buttonClass;
+    }
+  },
+  methods: {
+    click(e) {
+      this.$emit('click', e);
+    },
+    getuserinfo(e) {
+      this.$emit('getuserinfo', e);
     }
   }
 };
