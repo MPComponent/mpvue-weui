@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/button/main",
     "pages/index/main"
   ],
   "window": {
