@@ -1,7 +1,7 @@
 <template>
   <page-content>
       <div class="button-content">
-        <mp-button type="default" size="large">默认按钮</mp-button>
+        <mp-button type="default" size="large" btnClass="mb15">默认按钮</mp-button>
         <mp-button type="primary" size="large">主要按钮</mp-button>
         <mp-button type="warn" size="large">警告按钮</mp-button>
         <mp-button type="primary" size="normal">普通按钮</mp-button>

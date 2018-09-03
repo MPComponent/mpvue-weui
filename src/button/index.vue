@@ -22,11 +22,15 @@ export default {
     disabled: {
       type: Boolean,
       default: false
+    },
+    btnClass: {
+      type: Array,
+      default: false
     }
   },
   computed: {
     buttonClass() {
-      let buttonClass = `weui-btn weui-btn-${this.size}`;
+      let buttonClass = `weui-btn weui-btn-${this.size} ${this.btnClass}`;
       return buttonClass;
     }
   }

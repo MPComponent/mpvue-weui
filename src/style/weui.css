@@ -642,7 +642,7 @@ icon {
 }
 
 .weui-btn {
-  margin-top: 15px;
+  /* margin-top: 15px; */
 }
 
 .weui-btn:first-child {
