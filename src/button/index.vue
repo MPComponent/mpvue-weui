@@ -1,5 +1,5 @@
 <template>
-  <button :class="buttonClass" :type="type" :plain="plain" :disabled="disabled" :loading="loading" :open-type="openType" :app-parameter="appParameter" :hover-start-time="hoverStartTime" :hover-stay-time="hoverStayTime" :lang="lang" :session-from="sessionFrom" :send-message-title="sendMessageTitle" :send-message-path="sendMessagePath" :send-message-img="sendMessageImg" :show-message-card="showMessageCard" @click="click" @getuserinfo="getuserinfo">
+  <button :class="buttonClass" :type="type" :plain="plain" :disabled="disabled" :loading="loading" :open-type="openType" :app-parameter="appParameter" :hover-start-time="hoverStartTime" :hover-stay-time="hoverStayTime" :lang="lang" :session-from="sessionFrom" :send-message-title="sendMessageTitle" :send-message-path="sendMessagePath" :send-message-img="sendMessageImg" :show-message-card="showMessageCard" @click="click" @getuserinfo="getuserinfo" @contact="contact" @error="error">
     <slot></slot>
   </button>
 </template>
@@ -57,7 +57,7 @@ export default {
     },
     sendMessageTitle: {
       type: String,
-      default: 'sendMessageTitle'
+      default: ''
     },
     sendMessagePath: {
       type: String,
@@ -84,6 +84,12 @@ export default {
     },
     getuserinfo(e) {
       this.$emit('getuserinfo', e);
+    },
+    contact(e) {
+      this.$emit('contact', e);
+    },
+    error(e) {
+      this.$emit('error', e);
     }
   }
 };

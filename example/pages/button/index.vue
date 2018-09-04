@@ -1,7 +1,7 @@
 <template>
   <page-content>
     <div class="button-content">
-      <mp-button type="default" size="large" btnClass="mb15" openType="getUserInfo" @getuserinfo="getuserinfo">默认按钮</mp-button>
+      <mp-button type="default" size="large" btnClass="mb15" openType="contact" showMessageCard @contact="contact">默认按钮</mp-button>
       <mp-button type="primary" size="large" btnClass="mb15">主要按钮</mp-button>
       <mp-button type="warn" size="large" btnClass="mb15">警告按钮</mp-button>
       <mp-button type="defualt" size="normal" btnClass="mb15 mr15" plain>默认按钮</mp-button>
@@ -12,6 +12,7 @@
       <mp-button type="primary" size="mini" btnClass="mb15">迷你按钮</mp-button>
       <mp-button type="primary" size="large" btnClass="mb15" disabled>禁用按钮</mp-button>
       <mp-button type="primary" size="large" btnClass="mb15" loading>加载按钮</mp-button>
+      <mp-button type="default" size="large" btnClass="mb15" openType="getUserInfo" @getuserinfo="getuserinfo">获取用户信息</mp-button>
     </div>
   </page-content>
 </template>
@@ -26,6 +27,9 @@ export default {
     pageContent
   },
   methods: {
+    contact(e) {
+      console.log(e);
+    },
     getuserinfo(e) {
       console.log(e);
     }
