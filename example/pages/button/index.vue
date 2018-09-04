@@ -1,7 +1,7 @@
 <template>
   <page-content title="Button" desc="按钮，WeUI采用小程序原生的按钮为主体，加入一些间距的样式。">
     <div class="button-content">
-      <mp-button type="default" size="large" btnClass="mb15" openType="contact" showMessageCard @contact="contact">默认按钮</mp-button>
+      <mp-button type="default" size="large" btnClass="mb15">默认按钮</mp-button>
       <mp-button type="primary" size="large" btnClass="mb15">主要按钮</mp-button>
       <mp-button type="warn" size="large" btnClass="mb15">警告按钮</mp-button>
       <mp-button type="defualt" size="normal" btnClass="mb15 mr15" plain>默认按钮</mp-button>
@@ -13,6 +13,7 @@
       <mp-button type="primary" size="large" btnClass="mb15" disabled>禁用按钮</mp-button>
       <mp-button type="primary" size="large" btnClass="mb15" loading>加载按钮</mp-button>
       <mp-button type="default" size="large" btnClass="mb15" openType="getUserInfo" @getuserinfo="getuserinfo">获取用户信息</mp-button>
+      <mp-button type="default" size="large" btnClass="mb15" openType="contact" showMessageCard @contact="contact" sendMessageTitle="会话卡片标题" sendMessageImg="/static/img/contact-test.jpg">显示卡片</mp-button>
     </div>
   </page-content>
 </template>
