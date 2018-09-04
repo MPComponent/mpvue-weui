@@ -1,7 +1,8 @@
 {
   "pages": [
+    "pages/index/main",
     "pages/button/main",
-    "pages/index/main"
+    "pages/badge/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
