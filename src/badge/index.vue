@@ -1,8 +1,8 @@
 <template>
   <label class="weui-badge-relative">
     <slot></slot>
-    <div v-if="Boolean(dot)" class="weui-badge-dot"></div>
-    <div v-if="info" :class="badgeClass">{{info}}</div>
+    <div v-if="dot" :class="badgeDotClass"></div>
+    <div v-if="info" :class="badgeInfoClass">{{info}}</div>
   </label>
 </template>
 
@@ -18,14 +18,20 @@ export default {
       type: Number,
       default: 0
     },
-    infoPos: {
+    badgePos: {
       type: String,
       default: 'right'
     }
   },
+  created() {
+    console.log(this.dot);
+  },
   computed: {
-    badgeClass() {
-      return this.infoPos === 'right' ? 'weui-badge-info weui-badge-info-right' : 'weui-badge-info weui-badge-info-right-top';
+    badgeDotClass() {
+      return this.badgePos === 'right' ? 'weui-badge-dot weui-badge-dot-right' : 'weui-badge-dot weui-badge-dot-right-top';
+    },
+    badgeInfoClass() {
+      return this.badgePos === 'right' ? 'weui-badge-info weui-badge-info-right' : 'weui-badge-info weui-badge-info-right-top';
     }
   }
 };
@@ -37,13 +43,19 @@ export default {
   display: inline-block;
 }
 .weui-badge-dot {
-  position: absolute;
-  top: -2px;
-  right: -10px;
   width: 10px;
   height: 10px;
   background-color: #e64340;
   border-radius: 20px;
+}
+.weui-badge-dot-right-top {
+  position: absolute;
+  top: -2px;
+  right: -10px;
+}
+.weui-badge-dot-right {
+  display: inline-block;
+  margin-left: 5px;
 }
 .weui-badge-info {
   padding: 0.15em 0.4em;
