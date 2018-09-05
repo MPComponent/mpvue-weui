@@ -2,6 +2,7 @@
   <div class="index">
     <a href="/pages/button/main" class="link">按钮：Button</a>
     <a href="/pages/badge/main" class="link">徽章：Badge</a>
+    <a href="/pages/slider/main" class="link">滑块：Slider</a>
   </div>
 </template>
 
