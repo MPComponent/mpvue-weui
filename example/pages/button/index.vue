@@ -1,11 +1,7 @@
 <template>
   <page-content title="Button" desc="按钮，WeUI采用小程序原生的按钮为主体，加入一些间距的样式。">
     <div class="button-content">
-<<<<<<< HEAD
-      <mp-button ddd="" type="default" size="large" btnClass="mb15" openType="contact" showMessageCard @contact="contact">默认按钮</mp-button>
-=======
       <mp-button type="default" size="large" btnClass="mb15">默认按钮</mp-button>
->>>>>>> 9fe0bade6e24a9513796642a5393c90fabe36fe5
       <mp-button type="primary" size="large" btnClass="mb15">主要按钮</mp-button>
       <mp-button type="warn" size="large" btnClass="mb15">警告按钮</mp-button>
       <mp-button type="defualt" size="normal" btnClass="mb15 mr15" plain>默认按钮</mp-button>
