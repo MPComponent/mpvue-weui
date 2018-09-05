@@ -641,10 +641,6 @@ icon {
   flex: 1;
 }
 
-.weui-btn {
-  /* margin-top: 15px; */
-}
-
 .weui-btn:first-child {
   margin-top: 0;
 }

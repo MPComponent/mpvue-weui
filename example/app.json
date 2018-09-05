@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/badge/main",
     "pages/index/main",
     "pages/button/main",
-    "pages/badge/main",
     "pages/slider/main"
   ],
   "window": {

@@ -1,67 +1,68 @@
 <template>
-  <span :class="badgeClass">
+  <label class="weui-badge-relative">
     <slot></slot>
-  </span>
+    <div v-if="Boolean(dot)" class="weui-badge-dot"></div>
+    <div v-if="info" :class="badgeClass">{{info}}</div>
+  </label>
 </template>
 
 <script>
-  const presetClass = {
-    default: '',
-    header: 'weui-badge_header',
-    body: 'weui-badge_body',
-    footer: 'weui-badge_footer'
-  };
 
-  export default {
-    props: {
-      dot: {
-        type: Boolean,
-        default: false
-      },
-      preset: {
-        type: String,
-        default: 'default'
-      }
-
+export default {
+  props: {
+    dot: {
+      type: Boolean,
+      default: true
     },
-    computed: {
-      badgeClass() {
-        let classStr = this.dot ? 'weui-badge_dot' : presetClass[this.preset];
-        return `weui-badge ${classStr}`;
-      }
+    info: {
+      type: Number,
+      default: 0
+    },
+    infoPos: {
+      type: String,
+      default: 'right'
     }
-  };
+  },
+  computed: {
+    badgeClass() {
+      return this.infoPos === 'right' ? 'weui-badge-info weui-badge-info-right' : 'weui-badge-info weui-badge-info-right-top';
+    }
+  }
+};
 </script>
 
 <style>
-  .weui-badge {
-    display: inline-block;
-    padding: 0.15em 0.4em;
-    min-width: 8px;
-    border-radius: 18px;
-    background-color: #e64340;
-    color: #fff;
-    line-height: 1.2;
-    text-align: center;
-    font-size: 12px;
-    vertical-align: middle;
-  }
-  .weui-badge_dot {
-    padding: 0.4em;
-    min-width: 0;
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  .weui-badge_header{
-    position: absolute;
-    top: -.4em;
-    right: -.4em;
-  }
-  .weui-badge_body{
-    margin-left: 5px;
-  }
-  .weui-badge_footer{
-    margin-left: 5px;
-    margin-right: 5px;
-  }
+.weui-badge-relative {
+  position: relative;
+  display: inline-block;
+}
+.weui-badge-dot {
+  position: absolute;
+  top: -2px;
+  right: -10px;
+  width: 10px;
+  height: 10px;
+  background-color: #e64340;
+  border-radius: 20px;
+}
+.weui-badge-info {
+  padding: 0.15em 0.4em;
+  min-width: 8px;
+  border-radius: 18px;
+  background-color: #e64340;
+  color: #fff;
+  line-height: 1.2;
+  text-align: center;
+  font-size: 12px;
+  vertical-align: middle;
+}
+.weui-badge-info-right {
+  display: inline;
+  margin-left: 5px;
+}
+.weui-badge-info-right-top {
+  position: absolute;
+  top: -0.4em;
+  right: -0.4em;
+}
 </style>
