@@ -23,9 +23,6 @@ export default {
       default: 'right'
     }
   },
-  created() {
-    console.log(this.dot);
-  },
   computed: {
     badgeDotClass() {
       return this.badgePos === 'right' ? 'weui-badge-dot weui-badge-dot-right' : 'weui-badge-dot weui-badge-dot-right-top';
@@ -41,6 +38,7 @@ export default {
 .weui-badge-relative {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
 }
 .weui-badge-dot {
   width: 10px;
