@@ -1,14 +1,12 @@
 {
   "pages": [
-    "pages/index/main",
-    "pages/badge/main",
     "pages/button/main",
-    "pages/slider/main"
+    "pages/index/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Mpvue-WeUI",
+    "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   }
 }
