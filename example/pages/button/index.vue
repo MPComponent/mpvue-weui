@@ -13,7 +13,7 @@
       <mp-button type="primary" size="large" btnClass="mb15" disabled>禁用按钮</mp-button>
       <mp-button type="primary" size="large" btnClass="mb15" loading>加载按钮</mp-button>
       <mp-button type="default" size="large" btnClass="mb15" openType="getUserInfo" @getuserinfo="getuserinfo">获取用户信息</mp-button>
-      <mp-button type="default" size="large" btnClass="mb15" openType="contact" showMessageCard @contact="contact" sendMessageTitle="会话卡片标题" sendMessageImg="/static/img/contact-test.jpg">显示卡片</mp-button>
+      <mp-button type="default" size="large" btnClass="mb15" openType="contact" showMessageCard @contact="contact" sendMessageTitle="会话卡片标题" sendMessageImg="/static/images/contact-test.jpg">显示卡片</mp-button>
     </div>
   </page-content>
 </template>

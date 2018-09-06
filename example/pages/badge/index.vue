@@ -44,7 +44,7 @@
       <div class="weui-cells weui-cells_after-title">
         <div class="weui-cell">
           <mp-badge :dot=false :info=9 badgePos="right-top">
-            <image src='/static/img/pic_160.png' class="badge-img" />
+            <image src='/static/images/pic_160.png' class="badge-img" />
           </mp-badge>
           <div class="ml15">
             <div>联系人名称</div>
