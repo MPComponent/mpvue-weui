@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/picker/main",
     "pages/index/main",
     "pages/badge/main",
     "pages/button/main",
