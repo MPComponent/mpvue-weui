@@ -143,10 +143,7 @@ export default {
         this.pickerValueMinute = minuteArray;
       } else if (this.mode === 'multiSelector') {
         this.pickerValueMulArray = valueArray;
-      } else if (
-        this.mode === 'multiLinkageSelector' &&
-        this.deepLength === 2
-      ) {
+      } else if (this.mode === 'multiLinkageSelector' && this.deepLength === 2) {
         // 两级联动
         let pickerValueMulTwoOne = [];
         let pickerValueMulTwoTwo = [];
@@ -203,13 +200,7 @@ export default {
           }
           // 第三列
           let numSecond = this.pickerValueDefault[1];
-          for (
-            let i = 0,
-              length =
-                pickerValueArray[num].children[numSecond].children.length;
-            i < length;
-            i++
-          ) {
+          for (let i = 0, length = pickerValueArray[num].children[numSecond].children.length; i < length; i++) {
             pickerValueMulThreeThree.push(
               pickerValueArray[num].children[numSecond].children[i]
             );
@@ -272,15 +263,8 @@ export default {
         if (changeValue[0] !== this.pickerValue[0]) {
           let pickerValueMulTwoTwo = [];
           // 第一列滚动第二列数据更新
-          for (
-            let i = 0,
-              length = pickerValueArray[changeValue[0]].children.length;
-            i < length;
-            i++
-          ) {
-            pickerValueMulTwoTwo.push(
-              pickerValueArray[changeValue[0]].children[i]
-            );
+          for (let i = 0, length = pickerValueArray[changeValue[0]].children.length; i < length; i++) {
+            pickerValueMulTwoTwo.push(pickerValueArray[changeValue[0]].children[i]);
           }
           this.pickerValueMulTwoTwo = pickerValueMulTwoTwo;
           // 第二列初始化为 0
@@ -296,29 +280,12 @@ export default {
         // 如果是第一列滚动
         if (changeValue[0] !== this.pickerValue[0]) {
           this.pickerValueMulThreeTwo = [];
-          for (
-            let i = 0,
-              length = pickerValueArray[changeValue[0]].children.length;
-            i < length;
-            i++
-          ) {
-            pickerValueMulThreeTwo.push(
-              pickerValueArray[changeValue[0]].children[i]
-            );
+          for (let i = 0, length = pickerValueArray[changeValue[0]].children.length; i < length; i++) {
+            pickerValueMulThreeTwo.push(pickerValueArray[changeValue[0]].children[i]);
           }
           // 重新渲染第三列
-          for (
-            let i = 0,
-              length =
-                pickerValueArray[changeValue[0]].children[changeValue[1]]
-                  .children.length;
-            i < length;
-            i++
-          ) {
-            pickerValueMulThreeThree.push(
-              pickerValueArray[changeValue[0]].children[changeValue[1]]
-                .children[i]
-            );
+          for (let i = 0, length = pickerValueArray[changeValue[0]].children[changeValue[1]].children.length; i < length; i++) {
+            pickerValueMulThreeThree.push(pickerValueArray[changeValue[0]].children[changeValue[1]].children[i]);
           }
           changeValue[1] = 0;
           changeValue[2] = 0;
@@ -327,18 +294,8 @@ export default {
           // 重新渲染第三列
           this.pickerValueMulThreeThree = [];
           pickerValueMulThreeTwo = this.pickerValueMulThreeTwo;
-          for (
-            let i = 0,
-              length =
-                pickerValueArray[changeValue[0]].children[changeValue[1]]
-                  .children.length;
-            i < length;
-            i++
-          ) {
-            pickerValueMulThreeThree.push(
-              pickerValueArray[changeValue[0]].children[changeValue[1]]
-                .children[i]
-            );
+          for (let i = 0, length = pickerValueArray[changeValue[0]].children[changeValue[1]].children.length; i < length; i++) {
+            pickerValueMulThreeThree.push(pickerValueArray[changeValue[0]].children[changeValue[1]].children[i]);
           }
           if (changeValue[1] !== this.pickerValue[1]) {
             changeValue[2] = 0;
@@ -361,15 +318,11 @@ export default {
       if (mode === 'selector') {
         pickerLable = this.pickerValueSingleArray[value].label;
       } else if (mode === 'timeSelector') {
-        pickerLable = `${this.pickerValueHour[value[0]].label}-${
-          this.pickerValueMinute[value[1]].label
-        }`;
+        pickerLable = `${this.pickerValueHour[value[0]].label}-${this.pickerValueMinute[value[1]].label}`;
       } else if (mode === 'multiSelector') {
         for (let i = 0; i < value.length; i++) {
           if (i > 0) {
-            pickerLable +=
-              this.pickerValueMulArray[i][value[i]].label +
-              (i === value.length - 1 ? '' : '-');
+            pickerLable += this.pickerValueMulArray[i][value[i]].label + (i === value.length - 1 ? '' : '-');
           } else {
             pickerLable = this.pickerValueMulArray[i][value[i]].label + '-';
           }
@@ -377,13 +330,8 @@ export default {
       } else if (mode === 'multiLinkageSelector') {
         /* eslint-disable indent */
         pickerLable =
-          this.deepLength === 2
-            ? `${this.pickerValueMulTwoOne[value[0]].label}-${
-                this.pickerValueMulTwoTwo[value[1]].label
-              }`
-            : `${this.pickerValueMulThreeOne[value[0]].label}-${
-                this.pickerValueMulThreeTwo[value[1]].label
-              }-${this.pickerValueMulThreeThree[value[2]].label}`;
+          this.deepLength === 2 ? `${this.pickerValueMulTwoOne[value[0]].label}-${this.pickerValueMulTwoTwo[value[1]].label}`
+            : `${this.pickerValueMulThreeOne[value[0]].label}-${this.pickerValueMulThreeTwo[value[1]].label}-${this.pickerValueMulThreeThree[value[2]].label}`;
         /* eslint-enable indent */
       }
       return pickerLable;
