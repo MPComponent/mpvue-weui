@@ -19,6 +19,10 @@ export default {
 .mr15 {
   margin-right: 15px;
 }
+.flex-center {
+  display: flex;
+  align-content: center;
+}
 .page__hd {
   padding: 40px;
 }
