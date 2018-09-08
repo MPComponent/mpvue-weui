@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/city-picker/main",
     "pages/badge/main",
     "pages/index/main",
     "pages/button/main",
