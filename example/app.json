@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/picker/main",
     "pages/index/main",
     "pages/badge/main",
     "pages/button/main",
+    "pages/picker/main",
     "pages/slider/main"
   ],
   "window": {
