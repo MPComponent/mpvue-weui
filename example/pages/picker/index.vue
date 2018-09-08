@@ -1,34 +1,38 @@
 <template>
-  <div class="mvpue-picker">
-    <div class="page-hd">
-      <div class="page-title">mvpue-picker 示例</div>
-      <div class="page__desc">选中的值:</div>
-      <div class="picker-text">{{pickerText}}</div>
+  <page-content title="picker" :scopedObj="scopedObj" desc="选择器，这里使用小程序原生的picker, 并在此基础上进行了封装，统一了样式，支持联动。">
+    <div class="mpvue-weui-picker">
+      <div class="page__desc">选中的值：</div>
+      <div class="picker-text">{{scopedObj.pickerText}}</div>
+      <div class="page-bd">
+        <button type="default" @click="showSinglePicker">单列选择</button>
+        <button type="default" @click="showTimePicker">时间选择</button>
+        <button type="default" @click="showMulPicker">多列选择</button>
+        <button type="default" @click="showMulLinkageTwoPicker">二级联动选择</button>
+        <button type="default" @click="showMulLinkageThreePicker">三级联动选择</button>
+      </div>
+      <mp-picker ref="mpvuePicker" :mode="mode" :deepLength=deepLength :pickerValueDefault="pickerValueDefault" @onChange="onChange" @onConfirm="onConfirm" @onCancel="onCancel" :pickerValueArray="pickerValueArray"></mp-picker>
     </div>
-    <div class="page-bd">
-      <button type="default" @click="showSinglePicker">单列选择</button>
-      <button type="default" @click="showTimePicker">时间选择</button>
-      <button type="default" @click="showMulPicker">多列选择</button>
-      <button type="default" @click="showMulLinkageTwoPicker">二级联动选择</button>
-      <button type="default" @click="showMulLinkageThreePicker">三级联动选择</button>
-    </div>
-    <mp-picker ref="mpvuePicker" :mode="mode" :deepLength=deepLength :pickerValueDefault="pickerValueDefault" @onChange="onChange" @onConfirm="onConfirm" @onCancel="onCancel" :pickerValueArray="pickerValueArray"></mp-picker>
-  </div>
+  </page-content>
+
 </template>
 
 <script>
 import mpPicker from '../../../src/picker';
+import pageContent from '../../components/page-content';
 export default {
   components: {
-    mpPicker
+    mpPicker,
+    pageContent
   },
   data() {
     return {
       mode: 'selector',
+      scopedObj: {
+        pickerText: ''
+      },
       deepLength: 0, // 几级联动
       pickerValueDefault: [], // 初始化值
       pickerValueArray: [], // picker 数组值
-      pickerText: '',
       pickerSingleArray: [
         {
           label: '住宿费',
@@ -256,21 +260,15 @@ export default {
     onConfirm(e) {
       console.log(e);
       if (this.mode === 'selector') {
-        this.pickerText = e.label;
+        this.scopedObj.pickerText = e.label;
       } else if (this.mode === 'timeSelector') {
-        this.pickerText = e.label;
+        this.scopedObj.pickerText = e.label;
       } else if (this.mode === 'multiSelector') {
-        this.pickerText = e.label;
-      } else if (
-        this.mode === 'multiLinkageSelector' &&
-        this.deepLength === 2
-      ) {
-        this.pickerText = e.label;
-      } else if (
-        this.mode === 'multiLinkageSelector' &&
-        this.deepLength === 3
-      ) {
-        this.pickerText = e.label;
+        this.scopedObj.pickerText = e.label;
+      } else if (this.mode === 'multiLinkageSelector' && this.deepLength === 2) {
+        this.scopedObj.pickerText = e.label;
+      } else if (this.mode === 'multiLinkageSelector' && this.deepLength === 3) {
+        this.scopedObj.pickerText = e.label;
       }
     }
   }

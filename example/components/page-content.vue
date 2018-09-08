@@ -17,6 +17,10 @@ export default {
       type: String,
       default: ''
     },
+    scopedObj: {
+      type: Object,
+      default: { pickerText: '' }
+    },
     desc: {
       type: String,
       default: ''
