@@ -32,85 +32,85 @@ export default {
       pickerSingleArray: [
         {
           label: '住宿费',
-          value: 1
+          value: 10
         },
         {
           label: '活动费',
-          value: 2
+          value: 11
         },
         {
           label: '通讯费',
-          value: 3
+          value: 12
         },
         {
           label: '补助',
-          value: 4
+          value: 13
         }
       ],
       pickerMulArray: [
         [
-          { label: '中国', value: 1 },
-          { label: '美国', value: 2 },
-          { label: '日本', value: 3 },
-          { label: '俄罗斯', value: 4 }
+          { label: '中国', value: 20 },
+          { label: '美国', value: 22 },
+          { label: '日本', value: 23 },
+          { label: '俄罗斯', value: 24 }
         ],
         [
-          { label: '茶', value: 1 },
-          { label: '咖啡', value: 2 },
-          { label: '寿司', value: 3 },
-          { label: '奶酪', value: 4 }
+          { label: '茶', value: 25 },
+          { label: '咖啡', value: 26 },
+          { label: '寿司', value: 27 },
+          { label: '奶酪', value: 28 }
         ],
         [
-          { label: '歼20', value: 1 },
-          { label: 'F22', value: 2 },
-          { label: '秋月级', value: 3 },
-          { label: 'T50', value: 4 }
+          { label: '歼20', value: 29 },
+          { label: 'F22', value: 30 },
+          { label: '秋月级', value: 31 },
+          { label: 'T50', value: 32 }
         ]
       ],
       mulLinkageTwoPicker: [
         {
           label: '飞机票',
-          value: 0,
+          value: 100,
           children: [
             {
               label: '经济舱',
-              value: 1
+              value: 101
             },
             {
               label: '商务舱',
-              value: 2
+              value: 102
             }
           ]
         },
         {
           label: '火车票',
-          value: 1,
+          value: 200,
           children: [
             {
               label: '卧铺',
-              value: 1
+              value: 210
             },
             {
               label: '坐票',
-              value: 2
+              value: 202
             },
             {
               label: '站票',
-              value: 3
+              value: 203
             }
           ]
         },
         {
           label: '汽车票',
-          value: 3,
+          value: 300,
           children: [
             {
               label: '快班',
-              value: 1
+              value: 301
             },
             {
               label: '普通',
-              value: 2
+              value: 302
             }
           ]
         }
@@ -118,41 +118,41 @@ export default {
       mulLinkageThreePicker: [
         {
           label: 'phone',
-          value: 0,
+          value: 90,
           children: [
             {
               label: 'iphone',
-              value: 1,
+              value: 91,
               children: [
                 {
                   label: 'iphoneX',
-                  value: 1
+                  value: 92
                 },
                 {
                   label: 'iphone8',
-                  value: 2
+                  value: 93
                 },
                 {
                   label: 'iphone8 Plus',
-                  value: 3
+                  value: 94
                 }
               ]
             },
             {
               label: 'android',
-              value: 1,
+              value: 80,
               children: [
                 {
                   label: 'vivo',
-                  value: 1
+                  value: 81
                 },
                 {
                   label: '魅族',
-                  value: 2
+                  value: 82
                 },
                 {
                   label: '小米',
-                  value: 3
+                  value: 83
                 }
               ]
             }
@@ -160,45 +160,45 @@ export default {
         },
         {
           label: 'PC',
-          value: 0,
+          value: 70,
           children: [
             {
               label: 'mac',
-              value: 1,
+              value: 71,
               children: [
                 {
                   label: 'macbook Pro',
-                  value: 1
+                  value: 72
                 },
                 {
                   label: 'iMac',
-                  value: 2
+                  value: 73
                 },
                 {
                   label: 'mackbook',
-                  value: 3
+                  value: 74
                 },
                 {
                   label: 'mackbook air',
-                  value: 3
+                  value: 75
                 }
               ]
             },
             {
               label: 'windows',
-              value: 1,
+              value: 60,
               children: [
                 {
                   label: 'dell',
-                  value: 1
+                  value: 61
                 },
                 {
                   label: 'surface',
-                  value: 2
+                  value: 62
                 },
                 {
                   label: 'thinkpad',
-                  value: 3
+                  value: 63
                 }
               ]
             }
