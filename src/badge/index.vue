@@ -1,8 +1,8 @@
 <template>
   <label class="weui-badge-relative">
     <slot></slot>
-    <div v-if="dot" :class="badgeDotClass"></div>
-    <div v-if="info" :class="badgeInfoClass">{{info}}</div>
+    <div v-if="dot && isShowBadge" :class="badgeDotClass"></div>
+    <div v-if="info && isShowBadge" :class="badgeInfoClass">{{info}}</div>
   </label>
 </template>
 
@@ -10,6 +10,10 @@
 
 export default {
   props: {
+    isShowBadge: {
+      type: Boolean,
+      default: true
+    },
     dot: {
       type: Boolean,
       default: true
