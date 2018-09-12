@@ -6,7 +6,8 @@
     "pages/picker/main",
     "pages/city-picker/main",
     "pages/slider/main",
-    "pages/checkbox/main"
+    "pages/checkbox/main",
+    "pages/grid/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
