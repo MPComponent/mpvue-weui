@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/actionsheet/main",
     "pages/index/main",
     "pages/button/main",
     "pages/badge/main",
