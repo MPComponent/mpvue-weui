@@ -14,8 +14,15 @@ export default {
     show() {
       wx.showActionSheet({
         itemList: this.actions,
-        success: function (res) {
-          console.log(res.tapIndex);
+        success: res => {
+          let actionsheetObj = {
+            tapIndex: res.tapIndex,
+            tapLabel: this.actions[res.tapIndex]
+          };
+          this.$emit('confirm', actionsheetObj);
+        },
+        fail: res => {
+          this.$emit('cancel');
         }
       });
     }
