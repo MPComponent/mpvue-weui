@@ -1,6 +1,6 @@
 <template>
   <div class="weui-uploader">
-    <div class="weui-uploader__hd">
+    <div class="weui-uploader__hd" v-if="showTip">
       <div class="weui-uploader__title">图片上传</div>
       <div class="weui-uploader__info">{{files.length}}/{{maxLength}}</div>
     </div>
@@ -31,6 +31,10 @@ export default {
     maxLength: {
       type: Number,
       default: 1
+    },
+    showTip: {
+      type: Boolean,
+      default: true
     }
   },
   methods: {

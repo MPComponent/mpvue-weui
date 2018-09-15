@@ -1,6 +1,6 @@
 <template>
   <page-content title="uploader" desc="图片上传组件">
-    <mp-uploader @chooseImage="chooseImage"></mp-uploader>
+    <mp-uploader @chooseImage="chooseImage" :showTip="false"></mp-uploader>
   </page-content>
 </template>
 
@@ -22,5 +22,4 @@ export default {
 </script>
 
 <style>
-
 </style>
