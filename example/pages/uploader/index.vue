@@ -1,6 +1,6 @@
 <template>
   <page-content title="uploader" desc="图片上传组件">
-    <mp-uploader></mp-uploader>
+    <mp-uploader @chooseImage="chooseImage"></mp-uploader>
   </page-content>
 </template>
 
@@ -13,6 +13,10 @@ export default {
     pageContent
   },
   methods: {
+    chooseImage(e) {
+      console.log(e);
+      return; // eslint-disable-line
+    }
   }
 };
 </script>

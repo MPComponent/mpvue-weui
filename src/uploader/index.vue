@@ -1,6 +1,10 @@
 <template>
   <div class="weui-uploader">
-    <div class="weui-uploader__input-box">
+    <div class="weui-uploader__hd">
+      <div class="weui-uploader__title">图片上传</div>
+      <div class="weui-uploader__info">{{files.length}}/{{maxLength}}</div>
+    </div>
+    <div class="weui-uploader__bd">
       <div class="weui-uploader__files" id="uploaderFiles">
         <div v-for="(item ,index) in files" :key="index">
           <div class="weui-uploader__file">
@@ -9,7 +13,9 @@
           </div>
         </div>
       </div>
-      <div class="weui-uploader__input" @click="chooseImage"></div>
+      <div class="weui-uploader__input-box">
+        <div class="weui-uploader__input" @click="chooseImage"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -21,25 +27,37 @@ export default {
       files: []
     };
   },
+  props: {
+    maxLength: {
+      type: Number,
+      default: 1
+    }
+  },
   methods: {
     chooseImage(e) {
       let _this = this;
-      wx.chooseImage({
-        count: 1, // 默认9
-        sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
-        sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
-        success: function (res) {
-          console.log('成功上传：' + res.tempFilePaths);
-          // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
-          _this.files = _this.files.concat(res.tempFilePaths);
-        },
-        fail: function () {
-          console.log('fail');
-        },
-        complete: function () {
-          console.log('commplete');
-        }
-      });
+      this.$emit('chooseImage', e);
+      if (!(this.files.length > this.maxLength - 1)) {
+        wx.chooseImage({
+          count: 1, // 默认9
+          sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+          sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+          success: function (res) {
+            // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+            _this.files = _this.files.concat(res.tempFilePaths);
+          },
+          fail: function () {
+          },
+          complete: function () {
+          }
+        });
+      } else {
+        wx.showToast({
+          title: `最多上传 ${this.maxLength} 张图片`,
+          icon: 'none',
+          mask: true
+        });
+      }
     },
     predivImage(e) {
       console.log(e);
