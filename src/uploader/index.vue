@@ -49,8 +49,10 @@ export default {
           success: function (res) {
             // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
             _this.files = _this.files.concat(res.tempFilePaths);
+            _this.$emit('upLoadSuccess', res);
           },
           fail: function () {
+            _this.$emit('upLoadFail');
           },
           complete: function () {
           }

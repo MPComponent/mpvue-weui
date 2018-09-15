@@ -1,6 +1,6 @@
 <template>
   <page-content title="uploader" desc="图片上传组件">
-    <mp-uploader @chooseImage="chooseImage" :showTip="false"></mp-uploader>
+    <mp-uploader @upLoadSuccess="upLoadSuccess" @upLoadFail="upLoadFail" :showTip="false"></mp-uploader>
   </page-content>
 </template>
 
@@ -13,9 +13,11 @@ export default {
     pageContent
   },
   methods: {
-    chooseImage(e) {
+    upLoadSuccess(e) {
       console.log(e);
-      return; // eslint-disable-line
+    },
+    upLoadFail() {
+      console.log('上传失败');
     }
   }
 };
