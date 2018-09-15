@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/uploader/main",
     "pages/index/main",
     "pages/button/main",
     "pages/badge/main",

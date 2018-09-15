@@ -8,7 +8,7 @@ export {
 
 module.exports = {
   mpButton,
-  mpBadge,
+  mpBadge
 };
 
 module.exports.default = module.exports;
