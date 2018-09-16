@@ -30,7 +30,7 @@ export default {
   props: {
     maxLength: {
       type: Number,
-      default: 1
+      default: 20
     },
     showTip: {
       type: Boolean,
@@ -51,10 +51,11 @@ export default {
             _this.files = _this.files.concat(res.tempFilePaths);
             _this.$emit('upLoadSuccess', res);
           },
-          fail: function () {
-            _this.$emit('upLoadFail');
+          fail: function (res) {
+            _this.$emit('upLoadFail', res);
+            // 修改提交记录
           },
-          complete: function () {
+          complete: function (res) {
           }
         });
       } else {

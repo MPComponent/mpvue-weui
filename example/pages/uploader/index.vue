@@ -13,11 +13,11 @@ export default {
     pageContent
   },
   methods: {
-    upLoadSuccess(e) {
-      console.log(e);
+    upLoadSuccess(res) {
+      console.log(res);
     },
-    upLoadFail() {
-      console.log('上传失败');
+    upLoadFail(res) {
+      console.log('上传失败' + JSON.stringify(res));
     }
   }
 };
