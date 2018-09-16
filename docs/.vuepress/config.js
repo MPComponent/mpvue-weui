@@ -2,7 +2,7 @@ module.exports = {
   base: '/mpvue-weui/',
   dest: 'dist',
   title: 'mpvue-weui',
-  description: 'Just playing around',
+  description: '基于 mpvue 的 weui 框架',
   head: [
     ['link', {
       rel: 'icon',
