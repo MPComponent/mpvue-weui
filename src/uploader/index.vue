@@ -9,7 +9,7 @@
         <div v-for="(item ,index) in files" :key="index">
           <div class="weui-uploader__file">
             <image class="weui-uploader__img" :src="item" mode="aspectFill" @click="predivImage" :id="item" />
-            <div class="delete-icon" @click="deleteImg" :id="item"></div>
+            <div class="delete-icon" @click="deleteImg" :id="item" :data-index="index" :key="index"></div>
           </div>
         </div>
       </div>
@@ -53,6 +53,7 @@ export default {
           success: function (res) {
             // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
             _this.files = _this.files.concat(res.tempFilePaths);
+            res.files = _this.files;
             _this.$emit('upLoadSuccess', res);
           },
           fail: function (res) {
@@ -91,6 +92,12 @@ export default {
         }
       };
       this.files.remove(e.currentTarget.id);
+      let uploadDeleteObj = {
+        src: e.currentTarget.id,
+        index: e.currentTarget.dataset.index,
+        files: this.files
+      };
+      this.$emit('uploadDelete', uploadDeleteObj);
     }
   }
 };
