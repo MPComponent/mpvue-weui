@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/uploader/main",
     "pages/index/main",
     "pages/button/main",
     "pages/badge/main",
@@ -9,7 +8,8 @@
     "pages/slider/main",
     "pages/checkbox/main",
     "pages/grid/main",
-    "pages/actionsheet/main"
+    "pages/actionsheet/main",
+    "pages/uploader/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
