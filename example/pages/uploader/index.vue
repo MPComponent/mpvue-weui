@@ -1,6 +1,6 @@
 <template>
   <page-content title="uploader" desc="图片上传组件">
-    <mp-uploader @upLoadSuccess="upLoadSuccess" @upLoadFail="upLoadFail" :showTip="false"></mp-uploader>
+    <mp-uploader @upLoadSuccess="upLoadSuccess" @upLoadFail="upLoadFail" :showTip="false" :count=1></mp-uploader>
   </page-content>
 </template>
 

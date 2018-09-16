@@ -35,6 +35,10 @@ export default {
     showTip: {
       type: Boolean,
       default: true
+    },
+    count: {
+      type: Number,
+      default: 9
     }
   },
   methods: {
@@ -43,7 +47,7 @@ export default {
       this.$emit('chooseImage', e);
       if (!(this.files.length > this.maxLength - 1)) {
         wx.chooseImage({
-          count: 1, // 默认9
+          count: _this.count, // 默认9
           sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
           sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
           success: function (res) {
