@@ -25,12 +25,36 @@ module.exports = {
       }
     ],
     sidebar: [{
-      title: '快速开始',
-      collapsable: false,
-      children: [
-        ['guide/', '介绍'],
-        'guide/install'
-      ]
-    }]
+        title: '快速开始',
+        collapsable: false,
+        children: [
+          ['guide/', '介绍'],
+          'guide/install'
+        ]
+      }, {
+        title: '基础组件',
+        collapsable: false,
+        children: [
+          'baseComponent/button'
+        ]
+      },
+      {
+        title: '表单组件',
+        collapsable: false,
+        children: []
+      }, {
+        title: '操作反馈',
+        collapsable: false,
+        children: [
+          ['feedbackComponent/', '介绍']
+        ]
+      }, {
+        title: '导航相关',
+        collapsable: false,
+        children: [
+          ['navbarComponent/', '介绍']
+        ]
+      }
+    ]
   }
 };
