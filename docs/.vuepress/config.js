@@ -15,7 +15,22 @@ module.exports = {
     docsDir: 'docs',
     editLinkText: '在 GitHub 上编辑此页',
     lastUpdated: '上次更新',
-    nav: [],
-    sidebar: []
+    nav: [{
+        text: '首页',
+        link: '/'
+      },
+      {
+        text: '文档',
+        link: '/guide/'
+      }
+    ],
+    sidebar: [{
+      title: '快速开始',
+      collapsable: false,
+      children: [
+        ['guide/', '介绍'],
+        'guide/install'
+      ]
+    }]
   }
 };
