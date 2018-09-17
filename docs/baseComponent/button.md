@@ -22,16 +22,13 @@ export default {
 
 ### API
 
-
 | 参数 | 说明 | 类型 | 默认值 |
 |-----------|-----------|-----------|-------------|
-| type | 按钮类型，可选值为 `primary` `warning` `danger` | `String` | `default` |
+| type | 按钮类型，可选值为 `primary` `warning` `default` | `String` | `default` |
 | size | 按钮尺寸，可选值为 `normal` `large` `small` `mini` | `String` | `normal` |
 | plain | 是否为朴素按钮 | `Boolean` | `false` |
 | disabled | 是否禁用 | `Boolean` | `false` |
 | loading | 是否显示为加载状态 | `Boolean` | `false` |
-| block | 是否为块级元素 | `Boolean` | `false` |
-| square | 是否为方形按钮 | `Boolean` | `false` |
 | open-type | 微信开放能力 | `String` | - |
 | app-parameter | 打开 APP 时，向 APP 传递的参数 | `String` | - |
 | hover-start-time | 按住后多久出现点击态，单位毫秒 | `Number` | 20 |
@@ -42,3 +39,13 @@ export default {
 | send-message-path | 会话内消息卡片点击跳转小程序路径 | `String` | 当前分享路径 |
 | send-message-img | sendMessageImg | `String` | 截图 |
 | show-message-card | 显示会话内消息卡片 | `String` | `false` |
+
+### 事件
+
+| 事件名 | 说明 | 参数 |
+|-----------|-----------|-----------|
+| bind:click | 点击按钮且按钮状态不为加载或禁用时触发 | - |
+| bind:getuserinfo | 用户点击该按钮时，会返回获取到的用户信息，<br>从返回参数的 detail 中获取到的值同 wx.getUserInfo | - |
+| bind:contact | 客服消息回调 | - |
+| bind:getphonenumber | 获取用户手机号回调 | - |
+| bind:error | 当使用开放能力时，发生错误的回调 | - |
