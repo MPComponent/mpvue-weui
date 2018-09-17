@@ -6,7 +6,7 @@ module.exports = {
   head: [
     ['link', {
       rel: 'icon',
-      href: `/logo.png`
+      href: `/logo.ico`
     }]
   ],
   themeConfig: {
