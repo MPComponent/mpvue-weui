@@ -28,6 +28,7 @@ export default {
 | size | 按钮尺寸，可选值为 `normal` `large` `small` `mini` | `String` | `normal` |
 | plain | 是否为朴素按钮 | `Boolean` | `false` |
 | disabled | 是否禁用 | `Boolean` | `false` |
+| buttonClass | 作用于 button 组件上的 class | `String` | - |
 | loading | 是否显示为加载状态 | `Boolean` | `false` |
 | open-type | 微信开放能力 | `String` | - |
 | app-parameter | 打开 APP 时，向 APP 传递的参数 | `String` | - |
