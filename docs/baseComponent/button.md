@@ -2,7 +2,7 @@
 
 按钮，主要对原生 `<button>` 组件进行封装，并扩展了按钮的一些尺寸。
 
-<imgPreview />
+<imgPreview imgUrl="/assets/button.png"/>
 
 ### 引入
 
