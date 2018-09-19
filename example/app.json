@@ -1,9 +1,8 @@
 {
   "pages": [
-    "pages/badge/main",
     "pages/index/main",
     "pages/button/main",
-    
+    "pages/badge/main",
     "pages/picker/main",
     "pages/city-picker/main",
     "pages/slider/main",
