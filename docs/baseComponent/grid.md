@@ -48,7 +48,9 @@ export default {
 
 | 参数 | 说明 | 类型 | 默认值 |
 |-----------|-----------|-----------|-------------|
-| isShowBadge | 是否显示徽章（在业务中根据是否需要来显示） | `Boolean` | `true` |
-| dot | 显示形式是否为圆点 | `Boolean` | `true` |
-| info | 徽章显示的内容 | `[Number, String]` | 0 |
-| badgePos | 位置，可选值为 `right，right-top`| `String` | `right` |
+| gridData | 九宫格数据 | `Array` | [] |
+
+* 数组每个字段代表的含义
+  * src：导航图标的地址（建议图片放在 `/static` 目录下面，这样打包不会出现路径问题）
+  * name：导航的名称
+  * utl：跳转连接
