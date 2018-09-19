@@ -32,17 +32,19 @@ module.exports = {
           'guide/install'
         ]
       }, {
+        title: '表单组件',
+        collapsable: false,
+        children: [
+          'formComponent/button'
+        ]
+      }, {
         title: '基础组件',
         collapsable: false,
         children: [
-          'baseComponent/button'
+          'baseComponent/badge'
         ]
       },
       {
-        title: '表单组件',
-        collapsable: false,
-        children: []
-      }, {
         title: '操作反馈',
         collapsable: false,
         children: [
