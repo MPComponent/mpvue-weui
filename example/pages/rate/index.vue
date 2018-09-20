@@ -10,7 +10,7 @@
       <div class="weui-cells__title">支持点击:自定义显示内容</div>
       <mp-rate rateValue=4.5 @rateClick="rateClick" :isSupportClick=true></mp-rate>
     </page-content>
-    <div class="weui-rate-value-desc">{{rateScore}}</div>
+    <div class="weui-rate-value-desc">{{rateScoreText}}</div>
   </div>
 </template>
 
@@ -20,7 +20,7 @@ import pageContent from '../../components/page-content';
 export default {
   data() {
     return {
-      rateScore: '',
+      rateScoreText: '',
       rateScoreDesc: ['非常不满意，各方面都很差', '不满意，比较差', '一般，还需改善', '比较满意，仍可改善', '非常满意,无可挑剔']
     };
   },
@@ -31,8 +31,7 @@ export default {
   methods: {
     rateClick(index) {
       console.log(index);
-      this.rateScore = this.rateScoreDesc[index];
-      console.log(this.rateScore);
+      this.rateScoreText = this.rateScoreDesc[index];
     }
   }
 };
