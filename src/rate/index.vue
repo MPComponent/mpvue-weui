@@ -43,7 +43,6 @@ export default {
   },
   methods: {
     rateClick(index) {
-      console.log(index);
       this.$emit('rateClick', index);
     }
   }
