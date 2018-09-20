@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/rate/main",
     "pages/index/main",
     "pages/button/main",
     "pages/badge/main",
@@ -8,7 +9,6 @@
     "pages/slider/main",
     "pages/checkbox/main",
     "pages/grid/main",
-    "pages/rate/main",
     "pages/actionsheet/main",
     "pages/uploader/main"
   ],

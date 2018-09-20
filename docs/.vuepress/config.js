@@ -42,7 +42,8 @@ module.exports = {
         collapsable: false,
         children: [
           'baseComponent/badge',
-          'baseComponent/grid'
+          'baseComponent/grid',
+          'baseComponent/rate'
         ]
       },
       {

@@ -6,6 +6,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      rateValueClick: 0
+    };
+  },
   props: {
     rateRange: {
       type: Number,
@@ -18,6 +23,10 @@ export default {
     rateClass: {
       type: String,
       default: ''
+    },
+    isSupportClick: {
+      type: Boolean,
+      defult: false
     }
   },
   computed: {
@@ -26,7 +35,7 @@ export default {
       const CLS_HALF = 'weui-rate-item-half ' + this.rateClass;
       const CLS_OFF = 'weui-rate-item-off ' + this.rateClass;
       let result = [];
-      let rateValue = Math.floor(this.rateValue * 2) / 2;
+      let rateValue = this.rateValueClick ? Math.floor(this.rateValueClick * 2) / 2 : Math.floor(this.rateValue * 2) / 2;
       let hasDecimal = rateValue % 1 !== 0;
       let integer = Math.floor(rateValue);
       for (let i = 0; i < integer; i++) {
@@ -43,7 +52,11 @@ export default {
   },
   methods: {
     rateClick(index) {
-      this.$emit('rateClick', index);
+      if (this.isSupportClick) {
+        this.rateValue = index + 1;
+        this.rateValueClick = this.rateValue;
+        this.$emit('rateClick', index);
+      }
     }
   }
 };
