@@ -1,6 +1,6 @@
 <template>
   <div class="weui-rate">
-    <span v-for="(item, index) in itemClasses" class="weui-rate-item" :class="item" :key="index"></span>
+    <span v-for="(item, index) in itemClasses" class="weui-rate-item" :class="item" :key="index" @click="rateClick(index)"></span>
   </div>
 </template>
 
@@ -39,6 +39,12 @@ export default {
         result.push(CLS_OFF);
       }
       return result;
+    }
+  },
+  methods: {
+    rateClick(index) {
+      console.log(index);
+      this.$emit('rateClick', index);
     }
   }
 };
