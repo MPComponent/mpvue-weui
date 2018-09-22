@@ -5,3 +5,10 @@ export {
   mpButton,
   mpBadge
 };
+
+module.exports = {
+  mpButton,
+  mpBadge
+};
+
+module.exports.default = module.exports;

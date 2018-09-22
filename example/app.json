@@ -5,7 +5,13 @@
     "pages/badge/main",
     "pages/picker/main",
     "pages/city-picker/main",
-    "pages/slider/main"
+    "pages/slider/main",
+    "pages/checkbox/main",
+    "pages/grid/main",
+    "pages/rate/main",
+    "pages/actionsheet/main",
+    "pages/uploader/main",
+    "pages/searchbar/main"
   ],
   "window": {
     "backgroundTextStyle": "light",

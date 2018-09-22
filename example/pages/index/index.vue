@@ -38,21 +38,21 @@ export default {
           id: 'form',
           name: '表单',
           open: false,
-          pages: ['button', 'slider']
+          pages: ['button', 'slider', 'checkbox', 'uploader']
         },
         {
           id: 'widget',
           name: '基础组件',
           open: false,
           pages: [
-            'badge'
+            'badge', 'grid', 'rate'
           ]
         },
         {
           id: 'feedback',
           name: '操作反馈',
           open: false,
-          pages: ['picker', 'city-picker']
+          pages: ['picker', 'city-picker', 'actionsheet']
         },
         {
           id: 'nav',
@@ -64,7 +64,7 @@ export default {
           id: 'search',
           name: '搜索相关',
           open: false,
-          pages: []
+          pages: ['searchbar']
         }
       ]
     };

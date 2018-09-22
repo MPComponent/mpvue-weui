@@ -1,5 +1,5 @@
 <template>
-  <button :class="buttonClass" :type="type" :plain="plain" :disabled="disabled" :loading="loading" :open-type="openType" :app-parameter="appParameter" :hover-start-time="hoverStartTime" :hover-stay-time="hoverStayTime" :lang="lang" :session-from="sessionFrom" :send-message-title="sendMessageTitle" :send-message-path="sendMessagePath" :send-message-img="sendMessageImg" :show-message-card="showMessageCard" @click="click" @getuserinfo="getuserinfo" @contact="contact" @error="error">
+  <button :class="buttonClass" :type="type" :plain="plain" :disabled="disabled" :loading="loading" :open-type="openType" :app-parameter="appParameter" :hover-start-time="hoverStartTime" :hover-stay-time="hoverStayTime" :lang="lang" :session-from="sessionFrom" :send-message-title="sendMessageTitle" :send-message-path="sendMessagePath" :send-message-img="sendMessageImg" :show-message-card="showMessageCard" @click="click" @getuserinfo="getuserinfo" @contact="contact" @getphonenumber="getphonenumber" @error="error">
     <slot></slot>
   </button>
 </template>
@@ -9,7 +9,7 @@ export default {
   props: {
     type: {
       type: String,
-      default: ''
+      default: 'default'
     },
     size: {
       type: String,
@@ -88,6 +88,9 @@ export default {
     contact(e) {
       this.$emit('contact', e);
     },
+    getphonenumber(e) {
+      this.$emit('getphonenumber', e);
+    },
     error(e) {
       this.$emit('error', e);
     }
@@ -95,7 +98,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .weui-btn {
   display: inline-block;
 }

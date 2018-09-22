@@ -1,8 +1,8 @@
 <template>
   <label class="weui-badge-relative">
     <slot></slot>
-    <div v-if="dot && isShowBadge" :class="badgeDotClass"></div>
-    <div v-if="info && isShowBadge" :class="badgeInfoClass">{{info}}</div>
+    <div v-if="dot && isShowBadge && !info" :class="badgeDotClass"></div>
+    <div v-if="info && isShowBadge && !dot" :class="badgeInfoClass">{{info}}</div>
   </label>
 </template>
 
@@ -19,7 +19,7 @@ export default {
       default: true
     },
     info: {
-      type: Number,
+      type: [Number, String],
       default: 0
     },
     badgePos: {
