@@ -53,21 +53,20 @@ export default {
       this.inputValue = '';
     },
     input(e) {
-      console.log(e);
       this.inputValue = e.mp.detail.value;
+      this.$emit('input', e);
     },
     /* 输入框失去焦点时触发 */
     blur(e) {
-      console.log('blur');
+      this.$emit('blur', e);
     },
     /* 输入框聚焦时触发 */
     focus(e) {
-      console.log('focus');
+      this.$emit('focus', e);
     },
     /* 点击完成时触发 */
     confirm(e) {
-      console.log('confirm');
-      console.log(e);
+      this.$emit('confirm', e);
     }
   }
 };
