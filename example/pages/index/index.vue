@@ -64,7 +64,7 @@ export default {
           id: 'search',
           name: '搜索相关',
           open: false,
-          pages: []
+          pages: ['searchbar']
         }
       ]
     };

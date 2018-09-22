@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/searchbar/main",
     "pages/index/main",
     "pages/button/main",
     "pages/badge/main",
@@ -11,7 +10,8 @@
     "pages/grid/main",
     "pages/rate/main",
     "pages/actionsheet/main",
-    "pages/uploader/main"
+    "pages/uploader/main",
+    "pages/searchbar/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
