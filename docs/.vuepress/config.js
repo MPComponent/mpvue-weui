@@ -59,6 +59,13 @@ module.exports = {
         children: [
           ['navbarComponent/', '介绍']
         ]
+      },
+      {
+        title: '搜索相关',
+        collapsable: false,
+        children: [
+          'searchbarComponent/searchbar'
+        ]
       }
     ]
   }

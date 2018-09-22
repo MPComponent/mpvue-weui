@@ -24,17 +24,17 @@ export default {
     };
   },
   props: {
-    placeholder: {
-      type: String,
-      default: '搜索'
-    },
     inputValue: {
-      type: [String, Array, Boolean],
+      type: String,
       default: ''
     },
     isFocus: {
       type: Boolean,
       default: false
+    },
+    placeholder: {
+      type: String,
+      default: '搜索'
     },
     confirmType: {
       type: String,
@@ -52,8 +52,8 @@ export default {
     clearInput() {
       this.inputValue = '';
     },
+    /* 键盘输入时触发 */
     input(e) {
-      this.inputValue = e.mp.detail.value;
       this.$emit('input', e);
     },
     /* 输入框失去焦点时触发 */
