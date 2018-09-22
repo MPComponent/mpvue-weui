@@ -1,12 +1,12 @@
 {
   "pages": [
-    "pages/slider/main",
+    "pages/searchbar/main",
     "pages/index/main",
     "pages/button/main",
     "pages/badge/main",
     "pages/picker/main",
     "pages/city-picker/main",
-    
+    "pages/slider/main",
     "pages/checkbox/main",
     "pages/grid/main",
     "pages/rate/main",
