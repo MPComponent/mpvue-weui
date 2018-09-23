@@ -57,7 +57,7 @@ module.exports = {
         title: '导航相关',
         collapsable: false,
         children: [
-          ['navbarComponent/', '介绍']
+          'navbarComponent/navbar'
         ]
       },
       {
