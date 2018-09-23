@@ -1,6 +1,6 @@
 <template>
   <page-content title="navbar" desc="导航栏">
-    <mp-navbar :tabs="tabs" activeIndex=0></mp-navbar>
+    <mp-navbar :tabs="tabs" activeIndex=0 @tabClick="tabClick"></mp-navbar>
   </page-content>
 </template>
 
@@ -16,6 +16,11 @@ export default {
   components: {
     mpNavbar,
     pageContent
+  },
+  methods: {
+    tabClick(index) {
+      console.log(index);
+    }
   }
 };
 </script>

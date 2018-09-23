@@ -28,6 +28,7 @@ export default {
   methods: {
     tabClick(e) {
       this.activeIndex = Number(e.currentTarget.id);
+      this.$emit('tabClick', this.activeIndex);
     }
   }
 };
