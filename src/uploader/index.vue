@@ -44,7 +44,6 @@ export default {
   methods: {
     chooseImage(e) {
       let _this = this;
-      this.$emit('chooseImage', e);
       if (!(this.files.length > this.maxLength - 1)) {
         wx.chooseImage({
           count: _this.count, // 默认9

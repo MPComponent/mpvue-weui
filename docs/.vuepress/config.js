@@ -36,7 +36,8 @@ module.exports = {
         collapsable: false,
         children: [
           'formComponent/button',
-          'formComponent/slider'
+          'formComponent/slider',
+          'formComponent/uploader'
         ]
       }, {
         title: '基础组件',

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/uploader/main",
     "pages/index/main",
     "pages/button/main",
     "pages/badge/main",
@@ -10,7 +11,7 @@
     "pages/grid/main",
     "pages/rate/main",
     "pages/actionsheet/main",
-    "pages/uploader/main",
+    
     "pages/navbar/main",
     "pages/searchbar/main"
   ],
