@@ -1,6 +1,6 @@
 # Rate
 
-星级评分
+星级评分。
 
 <imgPreview imgUrl="/assets/rate.png"/>
 

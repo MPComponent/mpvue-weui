@@ -1,6 +1,6 @@
 # Badge
 
-徽章
+徽章。
 
 <imgPreview imgUrl="/assets/badge.png"/>
 
