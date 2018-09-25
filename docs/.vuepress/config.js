@@ -52,7 +52,8 @@ module.exports = {
         title: '操作反馈',
         collapsable: false,
         children: [
-          'feedbackComponent/picker'
+          'feedbackComponent/picker',
+          'feedbackComponent/citypicker'
         ]
       }, {
         title: '导航相关',
