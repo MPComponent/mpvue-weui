@@ -52,7 +52,7 @@ module.exports = {
         title: '操作反馈',
         collapsable: false,
         children: [
-          ['feedbackComponent/', '介绍']
+          'feedbackComponent/picker'
         ]
       }, {
         title: '导航相关',
