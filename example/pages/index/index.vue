@@ -58,7 +58,7 @@ export default {
           id: 'nav',
           name: '导航相关',
           open: false,
-          pages: []
+          pages: ['navbar']
         },
         {
           id: 'search',

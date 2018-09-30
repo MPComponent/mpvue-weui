@@ -1,6 +1,6 @@
 # Grid
 
-九宫格
+九宫格。
 
 <imgPreview imgUrl="/assets/grid.png"/>
 

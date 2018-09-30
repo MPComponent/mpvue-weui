@@ -11,6 +11,7 @@
     "pages/rate/main",
     "pages/actionsheet/main",
     "pages/uploader/main",
+    "pages/navbar/main",
     "pages/searchbar/main"
   ],
   "window": {

@@ -36,7 +36,8 @@ module.exports = {
         collapsable: false,
         children: [
           'formComponent/button',
-          'formComponent/slider'
+          'formComponent/slider',
+          'formComponent/uploader'
         ]
       }, {
         title: '基础组件',
@@ -51,13 +52,14 @@ module.exports = {
         title: '操作反馈',
         collapsable: false,
         children: [
-          ['feedbackComponent/', '介绍']
+          'feedbackComponent/picker',
+          'feedbackComponent/cityPicker'
         ]
       }, {
         title: '导航相关',
         collapsable: false,
         children: [
-          ['navbarComponent/', '介绍']
+          'navbarComponent/navbar'
         ]
       },
       {

@@ -13,6 +13,22 @@
 
 正在加班加点的开发中...
 
+# 开发预览
+
+``` bash
+1. git clone
+git clone git@github.com:MPComponent/mpvue-weui.git
+
+2. 安装依赖
+npm install
+
+3. 启动程序
+npm run dev
+
+4. 预览
+打开微信开发者工具，新建项目，将目录指向 /dist 即可
+```
+
 # 相关说明
 
 之前写了 [用 vue 写小程序，基于 mpvue 框架重写 weui](https://github.com/KuangPF/mpvue-weui),这个是在 mpvue 开源之初写的，开始的目的是想重写下 weui，然后写了一些踩坑文档。可能有点遗憾的是没有对其进行完整的封装，以至于在使用过程中就很不方便，在 issues 中也看到一些关于能不能封装成一个独立的 UI 框架的想法，加上大家也给了这个仓库这么多 :star: :star: ，因此决定将其封装成一个独立的 UI 框架：[mpvue-weui](https://github.com/MPComponent/mpvue-weui)。
