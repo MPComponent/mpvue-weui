@@ -1,6 +1,6 @@
 <template>
   <page-content title="loading" desc="加载组件">
-    <mp-loading :showLoading="showLoading"></mp-loading>
+    <mp-loading ref="mpLoading" :showLoading="isShowLoading" loadinText="加载中..."></mp-loading>
     <mp-button @click="showLoading" size="large">打开 Loading</mp-button>
   </page-content>
 </template>
@@ -12,7 +12,7 @@ import pageContent from '../../components/page-content';
 export default {
   data() {
     return {
-      showLoading: false
+      isShowLoading: false
     };
   },
   components: {
@@ -22,7 +22,11 @@ export default {
   },
   methods: {
     showLoading() {
-      this.showLoading = true;
+      this.isShowLoading = true;
+      setTimeout(() => {
+        this.isShowLoading = false;
+      }, 5000);
+      // this.$refs.mpLoading.show();
     }
   }
 };

@@ -3,7 +3,7 @@
     <div class="weui-loading-mask"></div>
     <div class="weui-loading-detail">
       <div class="weui-loading"></div>
-      <div class="weui-loading-text">加载中</div>
+      <div class="weui-loading-text">{{loadinText}}</div>
     </div>
   </div>
 </template>
@@ -14,6 +14,15 @@ export default {
     showLoading: {
       type: Boolean,
       default: false
+    },
+    loadinText: {
+      type: String,
+      default: '加载中'
+    }
+  },
+  methods: {
+    show() {
+      this.showLoading = true;
     }
   }
 };
@@ -57,6 +66,6 @@ export default {
 }
 .weui-loading-text {
   margin: 10px 0 0 0;
-  font-size: 14px;
+  font-size: 16px;
 }
 </style>
