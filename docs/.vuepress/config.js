@@ -45,7 +45,8 @@ module.exports = {
         children: [
           'baseComponent/badge',
           'baseComponent/grid',
-          'baseComponent/rate'
+          'baseComponent/rate',
+          'baseComponent/loading'
         ]
       },
       {
