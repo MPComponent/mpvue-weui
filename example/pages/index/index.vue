@@ -45,7 +45,7 @@ export default {
           name: '基础组件',
           open: false,
           pages: [
-            'badge', 'grid', 'rate'
+            'badge', 'grid', 'rate', 'loading'
           ]
         },
         {
