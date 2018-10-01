@@ -1,6 +1,6 @@
 <template>
   <div class="weui-loading-content" v-if="showLoading">
-    <div class="weui-loading-mask"></div>
+    <div class="weui-loading-mask" v-if="mask"></div>
     <div class="weui-loading-detail">
       <div class="weui-loading"></div>
       <div class="weui-loading-text">{{loadinText}}</div>
@@ -18,6 +18,10 @@ export default {
     loadinText: {
       type: String,
       default: '加载中'
+    },
+    mask: {
+      type: Boolean,
+      default: true
     }
   },
   methods: {
