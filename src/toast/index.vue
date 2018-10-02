@@ -1,10 +1,10 @@
 <template>
   <div class="weui-toast-content">
-    <div class="weui-toast-detail" :class="iconType==='default'? '' : 'weui-toast-detail-icon'">
-      <div class="toast-icon" v-if="iconType!='default'">
-        <icon type="success" size="40" v-if="iconType==='success'"></icon>
-        <icon type="warn" size="40" color="#FFBE00" v-if="iconType==='warn'"></icon>
-        <icon type="cancel" size="40" v-if="iconType==='error'"></icon>
+    <div class="weui-toast-detail" :class="type==='default'? '' : 'weui-toast-detail-icon'">
+      <div class="toast-icon" v-if="type!='default'">
+        <icon type="success" size="40" v-if="type==='success'"></icon>
+        <icon type="warn" size="40" color="#FFBE00" v-if="type==='warn'"></icon>
+        <icon type="cancel" size="40" v-if="type==='error'"></icon>
       </div>
       <div class="toast-text">支付成功</div>
     </div>
@@ -14,7 +14,7 @@
 <script>
 export default {
   props: {
-    iconType: {
+    type: {
       type: String,
       default: 'default'
     }

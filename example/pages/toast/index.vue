@@ -1,6 +1,6 @@
 <template>
   <page-content title="Toast" desc="提示组件">
-    <mp-toast iconType="error"></mp-toast>
+    <mp-toast type="error"></mp-toast>
   </page-content>
 </template>
 
