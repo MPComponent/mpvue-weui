@@ -1,8 +1,10 @@
 {
   "pages": [
-    "pages/actionsheet/main",
     "pages/index/main",
     "pages/button/main",
+    "pages/slider/main",
+    "pages/checkbox/main",
+    "pages/uploader/main",
     "pages/badge/main",
     "pages/grid/main",
     "pages/rate/main",
@@ -10,9 +12,7 @@
     "pages/toast/main",
     "pages/picker/main",
     "pages/city-picker/main",
-    "pages/slider/main",
-    "pages/checkbox/main",
-    "pages/uploader/main",
+    "pages/actionsheet/main",
     "pages/navbar/main",
     "pages/searchbar/main"
   ],

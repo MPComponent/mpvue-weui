@@ -33,7 +33,8 @@ export default {
       pickerValue: [0, 0, 0],
       provinceDataList: [],
       cityDataList: [],
-      areaDataList: []
+      areaDataList: [],
+      showPicker: false
     };
   },
   created() {
@@ -45,11 +46,6 @@ export default {
     this.pickerValue = this.pickerValueDefault;
   },
   props: {
-    /* 是否显示控件 */
-    showPicker: {
-      type: Boolean,
-      default: false
-    },
     /* 默认值 */
     pickerValueDefault: {
       type: Array,

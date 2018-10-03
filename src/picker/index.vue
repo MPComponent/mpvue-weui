@@ -66,6 +66,7 @@
 export default {
   data() {
     return {
+      showPicker: false,
       pickerChangeValue: [],
       pickerValue: [],
       pickerValueArrayChange: true,
@@ -86,11 +87,6 @@ export default {
     mode: {
       type: String,
       default: 'selector'
-    },
-    /* 是否显示控件 */
-    showPicker: {
-      type: Boolean,
-      default: false
     },
     /* picker 数值 */
     pickerValueArray: {
