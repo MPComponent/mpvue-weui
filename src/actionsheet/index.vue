@@ -5,7 +5,7 @@
 <script>
 export default {
   props: {
-    actions: {
+    itemList: {
       type: Array,
       default: []
     }
@@ -13,16 +13,16 @@ export default {
   methods: {
     show() {
       wx.showActionSheet({
-        itemList: this.actions,
+        itemList: this.itemList,
         success: res => {
           let actionsheetObj = {
             tapIndex: res.tapIndex,
-            tapLabel: this.actions[res.tapIndex]
+            tapLabel: this.itemList[res.tapIndex]
           };
           this.$emit('confirm', actionsheetObj);
         },
         fail: res => {
-          this.$emit('cancel');
+          this.$emit('cancel', res);
         }
       });
     }

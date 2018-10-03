@@ -55,7 +55,8 @@ module.exports = {
         collapsable: false,
         children: [
           'feedbackComponent/picker',
-          'feedbackComponent/cityPicker'
+          'feedbackComponent/cityPicker',
+          'feedbackComponent/actionsheet'
         ]
       }, {
         title: '导航相关',
