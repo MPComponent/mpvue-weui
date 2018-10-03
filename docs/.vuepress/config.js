@@ -46,7 +46,8 @@ module.exports = {
           'baseComponent/badge',
           'baseComponent/grid',
           'baseComponent/rate',
-          'baseComponent/loading'
+          'baseComponent/loading',
+          'baseComponent/toast'
         ]
       },
       {

@@ -6,6 +6,7 @@
     "pages/grid/main",
     "pages/rate/main",
     "pages/loading/main",
+    "pages/toast/main",
     "pages/picker/main",
     "pages/city-picker/main",
     "pages/slider/main",
