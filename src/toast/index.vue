@@ -6,7 +6,7 @@
         <icon type="warn" size="40" color="#FFBE00" v-if="type==='warn'"></icon>
         <icon type="cancel" size="40" v-if="type==='error'"></icon>
       </div>
-      <div class="toast-text">支付成功</div>
+      <div class="toast-text">{{content}}</div>
     </div>
   </div>
 </template>
@@ -26,6 +26,14 @@ export default {
     type: {
       type: String,
       default: 'default'
+    },
+    content: {
+      type: [String, Number],
+      default: ''
+    },
+    duration: {
+      type: Number,
+      default: 1500
     }
   },
   watch: {
@@ -36,7 +44,7 @@ export default {
       if (val) {
         this.timer = setTimeout(() => {
           this.showToast = false;
-        }, 1500);
+        }, this.duration);
       }
       this.$emit('input', val);
     }
@@ -74,6 +82,9 @@ export default {
   height: 40px;
   width: 40px;
   margin: 15px auto 20px;
+}
+.weui-toast-detail .toast-text {
+  font-size: 16px;
 }
 @-webkit-keyframes showToast {
   0% {
