@@ -23,6 +23,13 @@ export default {
     mpDatepicker
   },
   methods: {
+    /* 计算一个月多少天 */
+    getDays(year, month) {
+      if (month > 12 || month < 0) { return -1; }
+      month = parseInt(month, 10);
+      var date = new Date(year, month, 0);
+      return date.getDate();
+    }
   }
 };
 </script>

@@ -9,13 +9,13 @@
       <picker-view indicator-style="height: 40px;" class="mpvue-picker-view" :value="pickerValue" @change="pickerChange">
         <block>
           <picker-view-column>
-            <div class="picker-item" v-for="(item,index) in provinceDataList" :key="index">{{item.label}}</div>
+            <div class="picker-item" v-for="(item,index) in yearList" :key="index">{{item.label}}</div>
           </picker-view-column>
           <picker-view-column>
-            <div class="picker-item" v-for="(item,index) in cityDataList" :key="index">{{item.label}}</div>
+            <div class="picker-item" v-for="(item,index) in monthList" :key="index">{{item.label}}</div>
           </picker-view-column>
           <picker-view-column>
-            <div class="picker-item" v-for="(item,index) in areaDataList" :key="index">{{item.label}}</div>
+            <div class="picker-item" v-for="(item,index) in dayList" :key="index">{{item.label}}</div>
           </picker-view-column>
         </block>
       </picker-view>
@@ -27,16 +27,13 @@
 export default {
   data() {
     return {
+      showPicker: true,
+      yearList: [{}]
     };
   },
   created() {
   },
   props: {
-    /* 是否显示控件 */
-    showPicker: {
-      type: Boolean,
-      default: true
-    }
   },
   methods: {
   }
