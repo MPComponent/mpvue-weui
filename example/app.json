@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/actionsheet/main",
     "pages/index/main",
     "pages/button/main",
     "pages/badge/main",
@@ -11,7 +12,6 @@
     "pages/city-picker/main",
     "pages/slider/main",
     "pages/checkbox/main",
-    "pages/actionsheet/main",
     "pages/uploader/main",
     "pages/navbar/main",
     "pages/searchbar/main"
