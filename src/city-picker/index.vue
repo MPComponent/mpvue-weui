@@ -41,8 +41,7 @@ export default {
     this.handPickValueDefault(); // 对 pickerValueDefault 做兼容处理
     this.provinceDataList = provinceData;
     this.cityDataList = cityData[this.pickerValueDefault[0]];
-    this.areaDataList =
-      areaData[this.pickerValueDefault[0]][this.pickerValueDefault[1]];
+    this.areaDataList = areaData[this.pickerValueDefault[0]][this.pickerValueDefault[1]];
     this.pickerValue = this.pickerValueDefault;
   },
   props: {

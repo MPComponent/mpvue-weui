@@ -6,7 +6,7 @@
         <div class="mpvue-picker__action" @click="pickerCancel">取消</div>
         <div class="mpvue-picker__action" @click="pickerConfirm">确定</div>
       </div>
-      <picker-view indicator-style="height: 40px;" class="mpvue-picker-view" :value="pickerValue">
+      <picker-view indicator-style="height: 40px;" class="mpvue-picker-view" :value="pickerValue" @change="pickerChange">
         <block>
           <picker-view-column>
             <div class="picker-item" v-for="(item,index) in yearList" :key="index">{{item.label}}</div>
@@ -31,11 +31,11 @@ const NOW_DATE = new Date(); // 当前日期
 export default {
   data() {
     return {
-      showPicker: true,
+      pickerValue: [], // picker-view 的 value
+      showPicker: false,
       yearList: [],
       monthList: [],
-      dayList: [],
-      pickerValue: [] // picker-view 的 value
+      dayList: []
     };
   },
   props: {
@@ -55,32 +55,48 @@ export default {
       let yearList = [];
       let monthList = [];
       let dayList = [];
-      let pickerValue = [];
+      let value = [];
       for (let i = MIN_DATE.getFullYear(); i < MAX_DATE.getFullYear(); i++) {
         if (i === year) {
-          pickerValue.push(i - MIN_DATE.getFullYear());
+          value.push(i - MIN_DATE.getFullYear());
         }
         yearList.push({ label: i + '年', value: i });
       }
       for (let i = 0; i < 12; i++) {
         if (i === month) {
-          pickerValue.push(i);
+          value.push(i);
         }
         monthList.push({ label: i + 1 + '月', value: i + 1 });
       }
       let dayLength = this.getDays(year, month + 1);
       for (let i = 0; i < dayLength; i++) {
         if (i === day) {
-          pickerValue.push(i);
+          value.push(i - 1);
         }
         dayList.push({ label: i + 1 + '日', value: i + 1 });
       }
       this.yearList = yearList;
       this.monthList = monthList;
       this.dayList = dayList;
+      this.pickerValue = value;
+    },
+    pickerChange(e) {
+      let value = e.mp.detail.value;
+      if (this.pickerValue[0] !== value[0]) {
+        console.log('first');
+      } else if (this.pickerValue[1] !== value[1]) {
+        console.log('second');
+      } else {
+        console.log('third');
+      }
+      this.pickerValue = value;
+      console.log(value);
+      // 当地一列滚动时
+    },
+    show() {
       setTimeout(() => {
-        this.pickerValue = pickerValue;
-      }, 1000);
+        this.showPicker = true;
+      });
     },
     /* 计算一个月多少天 （ month 传正常的月份数，不用 -1） */
     getDays(year, month) {

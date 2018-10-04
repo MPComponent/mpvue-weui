@@ -2,7 +2,8 @@
   <div class="page">
     <page-content title="datepicker" desc="日期选择器，基于 picker 组件进行封装">
       <div class="mpvue-date-picker">
-        <mp-datepicker :defaultDate=[2016,2,19]></mp-datepicker>
+        <button type="default" @click="showDatePicker">城市选择</button>
+        <mp-datepicker ref="mpDatePicker" :defaultDate="defaultDate"></mp-datepicker>
       </div>
     </page-content>
     <div class="picker-text-content">
@@ -16,6 +17,7 @@ import pageContent from '../../components/page-content';
 export default {
   data() {
     return {
+      defaultDate: [2017, 2, 15]
     };
   },
   components: {
@@ -23,6 +25,9 @@ export default {
     mpDatepicker
   },
   methods: {
+    showDatePicker() {
+      this.$refs.mpDatePicker.show();
+    }
   }
 };
 </script>
