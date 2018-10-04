@@ -21,6 +21,11 @@ export default {
  <mp-citypicker ref="mpCityPicker" :pickerValueDefault="pickerValueDefault" @onChange="onChange" @onCancel="onCancel" @onConfirm="onConfirm"></mp-citypicker>
 ```
 
+```js
+/* 调用组件的 `show` 方法进行初始化 */
+this.$refs.mpCityPicker.show();
+```
+
 | 参数 | 说明 | 类型 | 默认值 |
 |-----------|-----------|-----------|-------------|
 | pickerValueDefault | 设置默认城市  | `Array` | `[0, 0, 0]` |

@@ -79,6 +79,8 @@ export default {
       if (this.pickerValue[0] !== value[0]) {
         if (value[1] === 1) { // only for February
           this.getDaysList(this.yearList[value[0]].value, this.monthList[value[1]].value, value);
+        } else {
+          this.pickerValue = value;
         }
       } else if (this.pickerValue[1] !== value[1]) {
         this.getDaysList(this.yearList[value[0]].value, this.monthList[value[1]].value, value);

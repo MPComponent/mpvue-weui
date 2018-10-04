@@ -56,6 +56,7 @@ module.exports = {
         children: [
           'feedbackComponent/picker',
           'feedbackComponent/cityPicker',
+          'feedbackComponent/datePicker',
           'feedbackComponent/actionsheet'
         ]
       }, {

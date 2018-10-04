@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/date-picker/main",
     "pages/index/main",
     "pages/button/main",
     "pages/slider/main",
@@ -13,6 +12,7 @@
     "pages/toast/main",
     "pages/picker/main",
     "pages/city-picker/main",
+    "pages/date-picker/main",
     "pages/actionsheet/main",
     "pages/navbar/main",
     "pages/searchbar/main"

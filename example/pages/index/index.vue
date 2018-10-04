@@ -52,7 +52,7 @@ export default {
           id: 'feedback',
           name: '操作反馈',
           open: false,
-          pages: ['picker', 'city-picker', 'actionsheet']
+          pages: ['picker', 'city-picker', 'date-picker', 'actionsheet']
         },
         {
           id: 'nav',
