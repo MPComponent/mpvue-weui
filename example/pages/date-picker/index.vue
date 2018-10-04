@@ -18,7 +18,7 @@ import pageContent from '../../components/page-content';
 export default {
   data() {
     return {
-      defaultDate: [2017, 2, 15],
+      defaultDate: [2018, 10, 1],
       datePickerObj: {}
     };
   },
@@ -31,19 +31,16 @@ export default {
       this.$refs.mpDatePicker.show();
     },
     onChange(e) {
-      // console.log('onChange');
       this.datePickerObj = e;
-      // console.log(e);
+      console.log(e);
     },
     onConfirm(e) {
-      // console.log('onConfirm');
       this.datePickerObj = e;
-      // console.log(e);
+      console.log(e);
     },
     onCancel(e) {
-      // console.log('onCancel');
       this.datePickerObj = e;
-      // console.log(e);
+      console.log(e);
     }
   }
 };

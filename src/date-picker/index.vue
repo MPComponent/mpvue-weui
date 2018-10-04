@@ -76,7 +76,6 @@ export default {
     },
     pickerChange(e) {
       let value = e.mp.detail.value;
-      console.log('onChange:' + value);
       if (this.pickerValue[0] !== value[0]) {
         if (value[1] === 1) { // only for February
           this.getDaysList(this.yearList[value[0]].value, this.monthList[value[1]].value, value);
@@ -86,13 +85,11 @@ export default {
       } else {
         this.pickerValue = value;
       }
-      console.log(value);
       this._$emit('onChange');
     },
     getDaysList(year, month, value) {
       let dayLength = this.getDays(year, month);
-      console.log(dayLength);
-      value[2] = dayLength < this.dayList.length ? dayLength - 1 : this.dayList.length - 1;
+      value[2] = dayLength < this.dayList.length && this.pickerValue[2] > dayLength - 1 ? dayLength - 1 : this.pickerValue[2];
       if (dayLength !== this.dayList.length) {
         let dayList = [];
         for (let i = 0; i < dayLength; i++) {
@@ -119,7 +116,6 @@ export default {
       this._$emit('onConfirm');
     },
     _$emit(emitName) {
-      console.log(this.pickerValue);
       let value = this.pickerValue;
       let pickObj = {
         label: `${this.yearList[value[0]].label}-${this.monthList[value[1]].label}-${this.dayList[value[2]].label}`,
