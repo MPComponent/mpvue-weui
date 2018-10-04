@@ -57,22 +57,16 @@ export default {
       let dayList = [];
       let value = [];
       for (let i = MIN_DATE.getFullYear(); i < MAX_DATE.getFullYear(); i++) {
-        if (i === year) {
-          value.push(i - MIN_DATE.getFullYear());
-        }
+        if (i === year) { value.push(i - MIN_DATE.getFullYear()); }
         yearList.push({ label: i + '年', value: i });
       }
       for (let i = 0; i < 12; i++) {
-        if (i === month) {
-          value.push(i);
-        }
+        if (i === month) { value.push(i); }
         monthList.push({ label: i + 1 + '月', value: i + 1 });
       }
       let dayLength = this.getDays(year, month + 1);
       for (let i = 0; i < dayLength; i++) {
-        if (i === day) {
-          value.push(i - 1);
-        }
+        if (i === day) { value.push(i - 1); }
         dayList.push({ label: i + 1 + '日', value: i + 1 });
       }
       this.yearList = yearList;
@@ -82,21 +76,57 @@ export default {
     },
     pickerChange(e) {
       let value = e.mp.detail.value;
+      console.log('onChange:' + value);
       if (this.pickerValue[0] !== value[0]) {
-        console.log('first');
+        if (value[1] === 1) { // only for February
+          this.getDaysList(this.yearList[value[0]].value, this.monthList[value[1]].value, value);
+        }
       } else if (this.pickerValue[1] !== value[1]) {
-        console.log('second');
+        this.getDaysList(this.yearList[value[0]].value, this.monthList[value[1]].value, value);
       } else {
-        console.log('third');
+        this.pickerValue = value;
+      }
+      console.log(value);
+      this._$emit('onChange');
+    },
+    getDaysList(year, month, value) {
+      let dayLength = this.getDays(year, month);
+      console.log(dayLength);
+      value[2] = dayLength < this.dayList.length ? dayLength - 1 : this.dayList.length - 1;
+      if (dayLength !== this.dayList.length) {
+        let dayList = [];
+        for (let i = 0; i < dayLength; i++) {
+          dayList.push({ label: i + 1 + '日', value: i + 1 });
+        }
+        this.dayList = dayList;
       }
       this.pickerValue = value;
-      console.log(value);
-      // 当地一列滚动时
     },
     show() {
       setTimeout(() => {
         this.showPicker = true;
       });
+    },
+    maskClick() {
+      this.pickerCancel();
+    },
+    pickerCancel() {
+      this.showPicker = false;
+      this._$emit('onCancel');
+    },
+    pickerConfirm() {
+      this.showPicker = false;
+      this._$emit('onConfirm');
+    },
+    _$emit(emitName) {
+      console.log(this.pickerValue);
+      let value = this.pickerValue;
+      let pickObj = {
+        label: `${this.yearList[value[0]].label}-${this.monthList[value[1]].label}-${this.dayList[value[2]].label}`,
+        value: `${this.yearList[value[0]].value}-${this.monthList[value[1]].value}-${this.dayList[value[2]].value}`,
+        index: value
+      };
+      this.$emit(emitName, pickObj);
     },
     /* 计算一个月多少天 （ month 传正常的月份数，不用 -1） */
     getDays(year, month) {
