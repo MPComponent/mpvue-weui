@@ -6,7 +6,7 @@
         <div class="mpvue-picker__action" @click="pickerCancel">取消</div>
         <div class="mpvue-picker__action" @click="pickerConfirm">确定</div>
       </div>
-      <picker-view indicator-style="height: 40px;" class="mpvue-picker-view" :value="pickerValue" @change="pickerChange">
+      <picker-view indicator-style="height: 40px;" class="mpvue-picker-view" :value="pickerValue">
         <block>
           <picker-view-column>
             <div class="picker-item" v-for="(item,index) in yearList" :key="index">{{item.label}}</div>
@@ -24,18 +24,71 @@
 </template>
 
 <script>
+/* 由于 getMonth 返回 0-11（1月-12月），因此在设置的时候 month-1 */
+const MIN_DATE = new Date(1900, 0, 1); // 最小支持日期 1990-01-01
+const MAX_DATE = new Date(2099, 11, 31); // 最大支持日期 20199-12-31
+const NOW_DATE = new Date(); // 当前日期
 export default {
   data() {
     return {
       showPicker: true,
-      yearList: [{}]
+      yearList: [],
+      monthList: [],
+      dayList: [],
+      pickerValue: [] // picker-view 的 value
     };
   },
-  created() {
-  },
   props: {
+    defaultDate: {
+      type: Array,
+      default: []
+    }
+  },
+  created() {
+    let year = this.defaultDate.length > 0 ? this.defaultDate[0] : NOW_DATE.getFullYear();
+    let month = this.defaultDate.length > 0 ? this.defaultDate[1] - 1 : NOW_DATE.getMonth();
+    let day = this.defaultDate.length > 0 ? this.defaultDate[2] : NOW_DATE.getDate();
+    this.initDateList(year, month, day);
   },
   methods: {
+    initDateList(year, month, day) {
+      let yearList = [];
+      let monthList = [];
+      let dayList = [];
+      let pickerValue = [];
+      for (let i = MIN_DATE.getFullYear(); i < MAX_DATE.getFullYear(); i++) {
+        if (i === year) {
+          pickerValue.push(i - MIN_DATE.getFullYear());
+        }
+        yearList.push({ label: i + '年', value: i });
+      }
+      for (let i = 0; i < 12; i++) {
+        if (i === month) {
+          pickerValue.push(i);
+        }
+        monthList.push({ label: i + 1 + '月', value: i + 1 });
+      }
+      let dayLength = this.getDays(year, month + 1);
+      for (let i = 0; i < dayLength; i++) {
+        if (i === day) {
+          pickerValue.push(i);
+        }
+        dayList.push({ label: i + 1 + '日', value: i + 1 });
+      }
+      this.yearList = yearList;
+      this.monthList = monthList;
+      this.dayList = dayList;
+      setTimeout(() => {
+        this.pickerValue = pickerValue;
+      }, 1000);
+    },
+    /* 计算一个月多少天 （ month 传正常的月份数，不用 -1） */
+    getDays(year, month) {
+      if (month > 12 || month < 0) { return -1; }
+      month = parseInt(month, 10);
+      var date = new Date(year, month, 0);
+      return date.getDate();
+    }
   }
 };
 </script>

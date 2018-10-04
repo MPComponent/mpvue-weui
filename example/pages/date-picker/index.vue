@@ -2,7 +2,7 @@
   <div class="page">
     <page-content title="datepicker" desc="日期选择器，基于 picker 组件进行封装">
       <div class="mpvue-date-picker">
-        <mp-datepicker></mp-datepicker>
+        <mp-datepicker :defaultDate=[2016,2,19]></mp-datepicker>
       </div>
     </page-content>
     <div class="picker-text-content">
@@ -23,13 +23,6 @@ export default {
     mpDatepicker
   },
   methods: {
-    /* 计算一个月多少天 */
-    getDays(year, month) {
-      if (month > 12 || month < 0) { return -1; }
-      month = parseInt(month, 10);
-      var date = new Date(year, month, 0);
-      return date.getDate();
-    }
   }
 };
 </script>
