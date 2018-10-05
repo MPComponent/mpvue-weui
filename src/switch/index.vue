@@ -1,6 +1,6 @@
 <template>
   <div class="weui-switch-content">
-    <switch :checked="switchValue" @change="change"></switch>
+    <switch :checked="switchValue" :disabled="disabled" @change="change" :color="color"></switch>
   </div>
 </template>
 
@@ -14,7 +14,15 @@ export default {
   props: {
     value: {
       type: Boolean,
-      default: true
+      default: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    color: {
+      type: String,
+      default: ''
     }
   },
   watch: {
