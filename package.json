@@ -1,6 +1,6 @@
 {
   "name": "mpvue-weui",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A Mpvue project",
   "main": "src/index.js",
   "author": "KuangPF <1633397286@qq.com>",
