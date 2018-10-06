@@ -37,7 +37,8 @@ module.exports = {
         children: [
           'formComponent/button',
           'formComponent/slider',
-          'formComponent/uploader'
+          'formComponent/uploader',
+          'formComponent/switch'
         ]
       }, {
         title: '基础组件',

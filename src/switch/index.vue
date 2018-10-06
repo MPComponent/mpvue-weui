@@ -25,18 +25,11 @@ export default {
       default: ''
     }
   },
-  watch: {
-    value(val) {
-      this.switchValue = val;
-    },
-    switchValue(val) {
-      this.$emit('input', val);
-    }
-  },
   methods: {
     change(e) {
       this.switchValue = e.mp.detail.value;
-      this.$emit('change', e.mp.detail.value);
+      this.$emit('input', this.switchValue);
+      this.$emit('change', this.switchValue);
     }
   }
 };
