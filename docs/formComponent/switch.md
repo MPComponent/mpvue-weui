@@ -18,7 +18,7 @@ export default {
 ### 使用
 
 ``` html
-<!-- 默认状态 -->
+<!-- 数据双向绑定 -->
 <mp-switch v-model="switchValue" @change="switchChange"></mp-switch>
 <!-- 禁用状态 -->
 <mp-switch :disabled=true></mp-switch>
@@ -36,8 +36,5 @@ export default {
 ### Event
 | 事件名 | 说明 | 参数 |
 |-----------|-----------|-----------|
-| @change| 改变时触发 | 返回是否选中 `true` || `false` |
+| @change| 改变时触发 | 返回是否选中 `true` , `false` |
 
-::: tip
-当 `switch` 组件的值发生改变触发 `change` 的时候，双向绑定的 `value `值其实是还没有更新的，也就是说 `value` 的更新是在 `change` 之后。
-:::
