@@ -37,7 +37,8 @@ module.exports = {
         children: [
           'formComponent/button',
           'formComponent/slider',
-          'formComponent/uploader'
+          'formComponent/uploader',
+          'formComponent/switch'
         ]
       }, {
         title: '基础组件',
@@ -55,7 +56,9 @@ module.exports = {
         collapsable: false,
         children: [
           'feedbackComponent/picker',
-          'feedbackComponent/cityPicker'
+          'feedbackComponent/cityPicker',
+          'feedbackComponent/datePicker',
+          'feedbackComponent/actionsheet'
         ]
       }, {
         title: '导航相关',

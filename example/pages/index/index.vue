@@ -38,7 +38,7 @@ export default {
           id: 'form',
           name: '表单',
           open: false,
-          pages: ['button', 'slider', 'checkbox', 'uploader']
+          pages: ['button', 'slider', 'checkbox', 'uploader', 'switch']
         },
         {
           id: 'widget',
@@ -52,7 +52,7 @@ export default {
           id: 'feedback',
           name: '操作反馈',
           open: false,
-          pages: ['picker', 'city-picker', 'actionsheet']
+          pages: ['picker', 'city-picker', 'date-picker', 'actionsheet']
         },
         {
           id: 'nav',

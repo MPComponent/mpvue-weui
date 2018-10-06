@@ -2,6 +2,10 @@
   "pages": [
     "pages/index/main",
     "pages/button/main",
+    "pages/slider/main",
+    "pages/checkbox/main",
+    "pages/uploader/main",
+    "pages/switch/main",
     "pages/badge/main",
     "pages/grid/main",
     "pages/rate/main",
@@ -9,10 +13,8 @@
     "pages/toast/main",
     "pages/picker/main",
     "pages/city-picker/main",
-    "pages/slider/main",
-    "pages/checkbox/main",
+    "pages/date-picker/main",
     "pages/actionsheet/main",
-    "pages/uploader/main",
     "pages/navbar/main",
     "pages/searchbar/main"
   ],

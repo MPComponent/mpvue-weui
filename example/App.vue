@@ -19,6 +19,9 @@ export default {
 .mr15 {
   margin-right: 15px;
 }
+.padding15 {
+  padding: 15px;
+}
 .page-info {
   padding: 15px;
 }

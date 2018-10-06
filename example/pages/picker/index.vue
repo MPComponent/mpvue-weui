@@ -1,6 +1,5 @@
 <template>
   <page-content title="picker" :scopedObj="scopedObj" desc="选择器，这里使用小程序原生的picker, 并在此基础上进行了封装，统一了样式，支持联动。">
-    <canvas style="width: 300px; height: 200px;" canvas-id="firstCanvas"></canvas>
     <div class="mpvue-weui-picker">
       <div class="page__desc">选中的值：</div>
       <div class="picker-text">{{scopedObj.pickerText}}</div>
@@ -211,9 +210,6 @@ export default {
         }
       ]
     };
-  },
-  mounted() {
-    this.drawCanvas();
   },
   methods: {
     onChange(e) {
