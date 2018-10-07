@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/checkbox/main",
     "pages/index/main",
     "pages/button/main",
     "pages/slider/main",
-    "pages/checkbox/main",
     "pages/uploader/main",
     "pages/switch/main",
     "pages/badge/main",
