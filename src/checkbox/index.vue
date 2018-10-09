@@ -29,19 +29,18 @@ export default {
     }
   },
   computed: {
-    /* eslint-disable */
     listRender() {
-      let length = this.checkBoxValue.length;
-      let isChecked;
-      for (let i = 0; i < this.list.length; i++) {
-        if (this.checkBoxValue[i] === this.list[i].value) {
-          this.list[i].checked = true;
-          return
-        } else {
-          this.list[i].checked = false;
+      let renderData = this.list.map(item => {
+        return { ...item, checked: false };
+      });
+      for (let i = 0; i < renderData.length; i++) {
+        for (let j = 0; j < this.checkBoxValue.length; j++) {
+          if (this.checkBoxValue[j] === renderData[i].value) {
+            renderData[i].checked = true;
+          }
         }
       }
-      return this.list;
+      return renderData;
     }
   },
   methods: {
