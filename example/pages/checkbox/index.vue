@@ -5,11 +5,19 @@
       <div class="page__desc">复选框</div>
     </div>
     <div class="page__bd page__bd_spacing">
-      <div class="checkbox-demo-category">单个复选框</div>
+      <div class="checkbox-demo-category">group-动物选择</div>
       <div class="checkbox-demo-block">
         <div class="checkbox-demo-title">
-          <mpCheckbox :list="checkboxList" v-model="value" @change="checkboxChange"></mpCheckbox>
+          <mpCheckbox :list="checkboxAnimalsList" v-model="valueAnimals"></mpCheckbox>
         </div>
+      </div>
+      <div>选中的动物：{{valueAnimals}}</div>
+      <div class="checkbox-demo-category">checkbox-水果</div>
+      <div class="checkbox-demo-block">
+        <div class="checkbox-demo-title">
+          <mpCheckbox :list="checkboxFruitList" v-model="valueFruit"></mpCheckbox>
+        </div>
+        <mp-button size="large" @click="toggleDisabled" btnClass="mt15 mb15">切换 disabled 状态</mp-button>
       </div>
     </div>
   </div>
@@ -17,19 +25,26 @@
 
 <script>
 import mpCheckbox from '../../../src/checkbox';
+import mpButton from '../../../src/button';
 export default {
   components: {
-    mpCheckbox
+    mpCheckbox,
+    mpButton
   },
   data() {
     return {
-      checkboxList: [{ value: 'cat' }, { value: 'dog' }, { value: 'rabbit' }, { value: 'pig' }, { value: 'horse' }],
-      value: ['dog', 'pig']
+      checkboxAnimalsList: [{ value: 'cat' }, { value: 'dog' }, { value: 'rabbit' }, { value: 'pig' }, { value: 'horse' }],
+      valueAnimals: ['dog', 'pig'],
+      checkboxFruitList: [{ value: '西瓜', disabled: true }],
+      valueFruit: []
     };
   },
   methods: {
     checkboxChange(e) {
       // console.log(e);
+    },
+    toggleDisabled() {
+      this.checkboxFruitList[0].disabled = !this.checkboxFruitList[0].disabled;
     }
   }
 };
@@ -46,5 +61,4 @@ export default {
   padding-top: 20px;
   padding-bottom: 5px;
 }
-
 </style>

@@ -1,10 +1,10 @@
 <template>
   <checkbox-group @change="checkboxChange" id="1" class="weui-checkbox-group">
     <label v-for="(item, index) in listRender" class="weui-checkbox" :key="index">
-      <checkbox class="weui-checkbox-input" :value="item.value" type="checkbox" :checked="item.checked" />
+      <checkbox class="weui-checkbox-input" :value="item.value" type="checkbox" :checked="item.checked" :disabled="item.disabled || false" />
       <div class="weui-checkbox-icon">
-        <icon v-show="item.checked!==true" class="weui-checkbox-icon-circle" type="circle" size="23"></icon>
-        <icon v-show="item.checked===true" class="weui-checkbox-icon-success" type="success" size="23"></icon>
+        <icon v-show="item.checked!==true" class="weui-checkbox-icon-circle" type="circle" size="23" :class="item.disabled ? 'weui-checkbox-diabled': ''"></icon>
+        <icon v-show="item.checked===true" class="weui-checkbox-icon-success" type="success" size="23" :class="item.disabled ? 'weui-checkbox-diabled': ''"></icon>
       </div>
       <div class="weui-checkbox-bd">{{item.value}}</div>
     </label>
@@ -90,12 +90,13 @@ export default {
   color: #d9d9d9;
   left: 15px;
 }
-
+.weui-checkbox-diabled {
+  opacity: 0.5;
+}
 .weui-checkbox-input {
   position: absolute;
   left: -9999px;
 }
-
 .weui-checkbox-icon {
   padding-right: 0.35em;
 }
