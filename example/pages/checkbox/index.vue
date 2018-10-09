@@ -8,7 +8,7 @@
       <div class="checkbox-demo-category">单个复选框</div>
       <div class="checkbox-demo-block">
         <div class="checkbox-demo-title">
-          <mpCheckbox :list="checkboxList" :value="value" @change="checkboxChange"></mpCheckbox>
+          <mpCheckbox :list="checkboxList" v-model="value" @change="checkboxChange"></mpCheckbox>
         </div>
       </div>
     </div>
@@ -43,12 +43,8 @@ export default {
   padding-top: 0;
 }
 .checkbox-demo-title {
-  border-bottom: solid #d9d9d9 1px;
   padding-top: 20px;
   padding-bottom: 5px;
 }
-.checkbox-demo-block {
-  font-size: 15px;
-  border-bottom: solid #d9d9d9 1px;
-}
+
 </style>

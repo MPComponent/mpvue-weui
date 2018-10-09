@@ -1,5 +1,5 @@
 <template>
-  <checkbox-group @change="checkboxChange" id="1">
+  <checkbox-group @change="checkboxChange" id="1" class="weui-checkbox-group">
     <label v-for="(item, index) in listRender" class="weui-checkbox" :key="index">
       <checkbox class="weui-checkbox-input" :value="item.value" type="checkbox" :checked="item.checked" />
       <div class="weui-checkbox-icon">
@@ -28,6 +28,11 @@ export default {
       required: true
     }
   },
+  watch: {
+    value(val) {
+      this.checkBoxValue = val;
+    }
+  },
   computed: {
     listRender() {
       let renderData = this.list.map(item => {
@@ -45,15 +50,18 @@ export default {
   },
   methods: {
     checkboxChange(e) {
-      console.log(e);
       this.checkBoxValue = e.mp.detail.value;
-      this.$emit('change', e);
+      this.$emit('input', e.mp.detail.value);
     }
   }
 };
 </script>
 
 <style>
+.weui-checkbox-group {
+  border-top: 1rpx solid #ccc;
+  border-bottom: 1rpx solid #ccc;
+}
 .weui-checkbox {
   padding: 10px 15px;
   position: relative;
