@@ -1,11 +1,13 @@
 {
   "pages": [
-    "pages/checkbox/main",
+    "pages/uploader/main",
+    "pages/modal/main",
     "pages/index/main",
     "pages/button/main",
     "pages/slider/main",
-    "pages/uploader/main",
+    
     "pages/switch/main",
+    "pages/checkbox/main",
     "pages/badge/main",
     "pages/grid/main",
     "pages/rate/main",

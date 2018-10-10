@@ -1,6 +1,6 @@
 <template>
   <page-content title="uploader" desc="图片上传组件">
-    <mp-uploader @upLoadSuccess="upLoadSuccess" @upLoadFail="upLoadFail" @uploadDelete="uploadDelete" :showTip=false :count=2></mp-uploader>
+    <mp-uploader @upLoadSuccess="upLoadSuccess" @upLoadFail="upLoadFail" @upLoadComplete="upLoadComplete" @uploadDelete="uploadDelete" :showTip=false :count=2></mp-uploader>
   </page-content>
 </template>
 
@@ -18,6 +18,9 @@ export default {
     },
     upLoadFail(res) {
       console.log(res);
+    },
+    upLoadComplete() {
+      console.log('complete');
     },
     uploadDelete(res) {
       console.log(res);
