@@ -2,7 +2,7 @@
   <div class="page">
     <page-content title="ActionSheet" desc="弹出式菜单，采用小程序原生的actionsheet">
       <mp-button type="default" size="large" btnClass="mb15" @click="showActionsheet">show actionsheet</mp-button>
-      <mp-actionsheet ref="actionsheet" :itemList="itemList" @confirm="confirm" @cancel="cancel"></mp-actionsheet>
+      <mp-actionsheet ref="actionsheet" :itemList="itemList" @confirm="confirm" @cancel="cancel" @complete="complete"></mp-actionsheet>
     </page-content>
     <div class="page-info">
       <div class="page__title">选中的信息为：</div>
@@ -38,6 +38,9 @@ export default {
     cancel(e) {
       console.log(e);
       this.actionsheetText = '点击了取消';
+    },
+    complete() {
+      console.log('complete');
     }
   }
 };

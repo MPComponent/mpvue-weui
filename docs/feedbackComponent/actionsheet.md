@@ -38,3 +38,4 @@ this.$refs.actionsheet.show();
 |-----------|-----------|-----------|
 | @confirm | 点击文字按钮时回调 | 返回点击的 `tapIndex` 以及按钮文字 `tapLabel` |
 | @cancel | 点击取消时回调 | 返回 `errMsg` |
+| @complete | 调用接口完成时回调 | - |

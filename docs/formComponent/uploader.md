@@ -34,6 +34,7 @@ export default {
 | @upLoadSuccess | 图片上传成功时触发 | `successRes` |
 | @upLoadFail | 图片上传失败时触发 | `failRes` |
 | @uploadDelete | 删除上传图片时触发 | `DeleteRes` |
+| @complete | 调用接口完成时回调 | - |
 
 ##### 参数相关说明
 * successRes：
