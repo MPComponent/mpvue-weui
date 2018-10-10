@@ -33,7 +33,7 @@ export default {
   },
   data() {
     return {
-      checkboxAnimalsList: [{ value: 'cat' }, { value: 'dog' }, { value: 'rabbit' }],
+      checkboxAnimalsList: [{ value: 'cat' }, { value: 'dog' }, { value: 'rabbit', disabled: true }],
       valueAnimals: ['dog'],
       checkboxFruitList: [{ value: '西瓜', disabled: true }],
       valueFruit: []
