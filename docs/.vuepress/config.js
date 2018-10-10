@@ -38,7 +38,8 @@ module.exports = {
           'formComponent/button',
           'formComponent/slider',
           'formComponent/uploader',
-          'formComponent/switch'
+          'formComponent/switch',
+          'formComponent/checkbox'
         ]
       }, {
         title: '基础组件',

@@ -52,6 +52,7 @@ export default {
     checkboxChange(e) {
       this.checkBoxValue = e.mp.detail.value;
       this.$emit('input', e.mp.detail.value);
+      this.$emit('change', this.checkBoxValue);
     }
   }
 };

@@ -8,7 +8,7 @@
       <div class="checkbox-demo-category">group-动物选择</div>
       <div class="checkbox-demo-block">
         <div class="checkbox-demo-title">
-          <mpCheckbox :list="checkboxAnimalsList" v-model="valueAnimals"></mpCheckbox>
+          <mpCheckbox :list="checkboxAnimalsList" v-model="valueAnimals" @change="checkboxChange"></mpCheckbox>
         </div>
       </div>
       <div>选中的动物：{{valueAnimals}}</div>
@@ -33,15 +33,15 @@ export default {
   },
   data() {
     return {
-      checkboxAnimalsList: [{ value: 'cat' }, { value: 'dog' }, { value: 'rabbit' }, { value: 'pig' }, { value: 'horse' }],
-      valueAnimals: ['dog', 'pig'],
+      checkboxAnimalsList: [{ value: 'cat' }, { value: 'dog' }, { value: 'rabbit' }],
+      valueAnimals: ['dog'],
       checkboxFruitList: [{ value: '西瓜', disabled: true }],
       valueFruit: []
     };
   },
   methods: {
     checkboxChange(e) {
-      // console.log(e);
+      console.log(e);
     },
     toggleDisabled() {
       this.checkboxFruitList[0].disabled = !this.checkboxFruitList[0].disabled;
