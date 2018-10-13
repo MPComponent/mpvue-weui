@@ -1,6 +1,6 @@
 <template>
-  <page-content title="Switch" desc="开关选择器，使用原生的 switch 组件，支持数据双向绑定。">
-    <mp-modal ref="mpModal" :title="title" :content="content" :showCancel="true" cancelText='cancel' cancelColor="#3cc51f" confirmText="ok" confirmColor="#000000"></mp-modal>
+  <page-content title="Modal" desc="对话框，采用小程序原生的 modal 。">
+    <mp-modal ref="mpModal" :title="title" :content="content" :showCancel="true"></mp-modal>
     <mpButton size="large" @click="showModal">显示 modal</mpButton>
   </page-content>
 </template>
