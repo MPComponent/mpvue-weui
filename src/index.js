@@ -1,41 +1,41 @@
-import mpButton from './button';
-import mpSlider from './slider';
-import mpCheckbox from './checkbox';
-import mpUploader from './uploader';
-import mpSwitch from './switch';
+import Button from './button';
+import Slider from './slider';
+import Checkbox from './checkbox';
+import Uploader from './uploader';
+import Switch from './switch';
 
-import mpBadge from './badge';
-import mpGrid from './grid';
-import mpRate from './rate';
-import mpLoading from './loading';
-import mpToast from './toast';
+import Badge from './badge';
+import Grid from './grid';
+import Rate from './rate';
+import Loading from './loading';
+import Toast from './toast';
 
-import mpPicker from './picker';
-import mpCityPicker from './city-picker';
-import mpDatePicker from './date-picker';
-import mpActionsheet from './actionsheet';
-import mpModal from './modal';
+import Picker from './picker';
+import CityPicker from './city-picker';
+import DatePicker from './date-picker';
+import Actionsheet from './actionsheet';
+import Modal from './modal';
 
-import mpNavbar from './navbar';
+import Navbar from './navbar';
 
-import mpSearchbar from './searchbar';
+import Searchbar from './searchbar';
 
 export {
-  mpButton,
-  mpSlider,
-  mpCheckbox,
-  mpUploader,
-  mpSwitch,
-  mpBadge,
-  mpGrid,
-  mpRate,
-  mpLoading,
-  mpToast,
-  mpPicker,
-  mpCityPicker,
-  mpDatePicker,
-  mpActionsheet,
-  mpModal,
-  mpNavbar,
-  mpSearchbar
+  Button,
+  Slider,
+  Checkbox,
+  Uploader,
+  Switch,
+  Badge,
+  Grid,
+  Rate,
+  Loading,
+  Toast,
+  Picker,
+  CityPicker,
+  DatePicker,
+  Actionsheet,
+  Modal,
+  Navbar,
+  Searchbar
 };
