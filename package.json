@@ -1,10 +1,18 @@
 {
   "name": "mpvue-weui",
   "version": "1.0.2",
-  "description": "A Mpvue project",
+  "description": "mpvue-weui, 基于 mpvue 的 weui 框架",
   "main": "src/index.js",
   "author": "KuangPF <1633397286@qq.com>",
-  "private": true,
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MPComponent/mpvue-weui"
+  },
+  "files": [
+    "src"
+  ],
+  "license": "MIT",
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
