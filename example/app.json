@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/modal/main",
     "pages/index/main",
     "pages/button/main",
     "pages/slider/main",
@@ -16,6 +15,7 @@
     "pages/city-picker/main",
     "pages/date-picker/main",
     "pages/actionsheet/main",
+    "pages/modal/main",
     "pages/navbar/main",
     "pages/searchbar/main"
   ],
