@@ -26,15 +26,19 @@ export default {
       this.$refs.mpModal.show();
     },
     confirm(res) {
+      console.log(res);
       console.log('confirm');
     },
     cancel(res) {
+      console.log(res);
       console.log('cancel');
     },
     fail(res) {
+      console.log(res);
       console.log('fail');
     },
     complete(res) {
+      console.log(res);
       console.log('complete');
     }
   }
