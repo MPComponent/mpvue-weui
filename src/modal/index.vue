@@ -43,7 +43,20 @@ export default {
         cancelText: this.cancelText,
         cancelColor: this.cancelColor,
         confirmText: this.confirmText,
-        confirmColor: this.confirmColor
+        confirmColor: this.confirmColor,
+        success: (res) => {
+          if (res.confirm) {
+            this.$emit('confirm', res);
+          } else {
+            this.$emit('cancel', res);
+          }
+        },
+        fail: (res) => {
+          this.$emit('fail', res);
+        },
+        complete: (res) => {
+          this.$emit('complete', res);
+        }
       });
     }
   }

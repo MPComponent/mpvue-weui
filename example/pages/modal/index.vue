@@ -1,6 +1,6 @@
 <template>
   <page-content title="Modal" desc="对话框，采用小程序原生的 modal 。">
-    <mp-modal ref="mpModal" :title="title" :content="content" :showCancel="true"></mp-modal>
+    <mp-modal ref="mpModal" :title="title" :content="content" @confirm="confirm" @cancel="cancel" @complete="complete" @fail="fail"></mp-modal>
     <mpButton size="large" @click="showModal">显示 modal</mpButton>
   </page-content>
 </template>
@@ -24,6 +24,18 @@ export default {
   methods: {
     showModal() {
       this.$refs.mpModal.show();
+    },
+    confirm(res) {
+      console.log('confirm');
+    },
+    cancel(res) {
+      console.log('cancel');
+    },
+    fail(res) {
+      console.log('fail');
+    },
+    complete(res) {
+      console.log('complete');
     }
   }
 };
