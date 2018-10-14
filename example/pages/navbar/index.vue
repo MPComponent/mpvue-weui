@@ -1,5 +1,5 @@
 <template>
-  <page-content title="navbar" desc="导航栏">
+  <page-content title="navbar" desc="导航栏。">
     <mp-navbar :tabs="tabs" activeIndex=0 @tabClick="tabClick"></mp-navbar>
   </page-content>
 </template>

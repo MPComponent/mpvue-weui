@@ -1,5 +1,5 @@
 <template>
-  <page-content title="Toast" desc="提示组件">
+  <page-content title="Toast" desc="提示组件。">
     <mp-button @click="toastFun('default', '文字提示', 1500 )" btnClass="mr15">只显示文字提示</mp-button>
     <mp-button @click="toastFun('success', '操作成功提示文案', 1500 )">操作成功提示</mp-button>
     <mp-button @click="toastFun('warn', '操作警告提示文案', 1500 )" btnClass="mr15">操作警告提示</mp-button>

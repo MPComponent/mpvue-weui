@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <page-content title="datepicker" desc="日期选择器，基于 picker 组件进行封装">
+    <page-content title="datepicker" desc="日期选择器，基于 picker 组件进行封装。">
       <div class="mpvue-date-picker">
         <button type="default" @click="showDatePicker">日期选择</button>
         <mp-datepicker ref="mpDatePicker" :defaultDate="defaultDate" @onChange="onChange" @onConfirm="onConfirm" @onCancel="onCancel"></mp-datepicker>

@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <page-content title="citypicker" desc="城市选择器，基于 picker 组件进行封装">
+    <page-content title="citypicker" desc="城市选择器，基于 picker 组件进行封装。">
       <div class="mpvue-city-picker">
         <button type="default" @click="showCityPicker">城市选择</button>
         <mp-citypicker ref="mpCityPicker" :pickerValueDefault="pickerValueDefault" @onChange="onChange" @onCancel="onCancel" @onConfirm="onConfirm"></mp-citypicker>
