@@ -7,7 +7,7 @@
 ### 引入
 
 ``` js
-import mpButton from 'mpvue-weui/button';
+import mpButton from 'mpvue-weui/src/button';
 export default {
   components: {
     mpButton,

@@ -5,7 +5,7 @@
 ### 引入
 
 ``` js
-import mpModal from 'mpvue-weui/modal';
+import mpModal from 'mpvue-weui/src/modal';
 export default {
   components: {
     mpModal,

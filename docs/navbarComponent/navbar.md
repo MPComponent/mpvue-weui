@@ -7,7 +7,7 @@
 ### 引入
 
 ``` js
-import mpNavbar from 'mpvue-weui/navbar';
+import mpNavbar from 'mpvue-weui/src/navbar';
 export default {
   components: {
     mpNavbar

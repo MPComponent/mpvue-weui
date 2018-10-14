@@ -7,7 +7,7 @@
 ### 引入
 
 ``` js
-import mpDatepicker from 'mpvue-weui/date-picker';
+import mpDatepicker from 'mpvue-weui/src/date-picker';
 export default {
   components: {
     mpDatepicker,

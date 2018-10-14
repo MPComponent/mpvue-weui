@@ -7,7 +7,7 @@
 ### 引入
 
 ``` js
-import mpRate from 'mpvue-weui/rate';
+import mpRate from 'mpvue-weui/src/rate';
 export default {
   components: {
     mpRate,

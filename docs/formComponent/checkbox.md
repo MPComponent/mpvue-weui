@@ -7,7 +7,7 @@
 ### 引入
 
 ``` js
-import mpCheckbox from 'mpvue-weui/checkbox';
+import mpCheckbox from 'mpvue-weui/src/checkbox';
 export default {
   components: {
     mpCheckbox,

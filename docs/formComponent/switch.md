@@ -7,7 +7,7 @@
 ### 引入
 
 ``` js
-import mpSwitch from 'mpvue-weui/switch';
+import mpSwitch from 'mpvue-weui/src/switch';
 export default {
   components: {
     mpSwitch,

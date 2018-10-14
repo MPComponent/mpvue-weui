@@ -7,7 +7,7 @@
 ### 引入
 
 ``` js
-import mpGrid from 'mpvue-weui/grid';
+import mpGrid from 'mpvue-weui/src/grid';
 export default {
   components: {
     mpGrid,
