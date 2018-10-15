@@ -1,11 +1,11 @@
 {
   "pages": [
-    "pages/checkbox/main",
     "pages/index/main",
     "pages/button/main",
     "pages/slider/main",
     "pages/uploader/main",
     "pages/switch/main",
+    "pages/checkbox/main",
     "pages/badge/main",
     "pages/grid/main",
     "pages/rate/main",
@@ -15,6 +15,7 @@
     "pages/city-picker/main",
     "pages/date-picker/main",
     "pages/actionsheet/main",
+    "pages/modal/main",
     "pages/navbar/main",
     "pages/searchbar/main"
   ],

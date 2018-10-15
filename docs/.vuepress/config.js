@@ -59,7 +59,8 @@ module.exports = {
           'feedbackComponent/picker',
           'feedbackComponent/cityPicker',
           'feedbackComponent/datePicker',
-          'feedbackComponent/actionsheet'
+          'feedbackComponent/actionsheet',
+          'feedbackComponent/modal'
         ]
       }, {
         title: '导航相关',

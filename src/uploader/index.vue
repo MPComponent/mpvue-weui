@@ -60,6 +60,7 @@ export default {
             // 修改提交记录
           },
           complete: function (res) {
+            _this.$emit('upLoadComplete', res);
           }
         });
       } else {

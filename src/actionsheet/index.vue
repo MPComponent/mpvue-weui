@@ -23,6 +23,9 @@ export default {
         },
         fail: res => {
           this.$emit('cancel', res);
+        },
+        complete: () => {
+          this.$emit('complete');
         }
       });
     }
