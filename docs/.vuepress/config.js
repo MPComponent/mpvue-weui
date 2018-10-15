@@ -1,6 +1,5 @@
 module.exports = {
   base: '/mpvue-weui/',
-  dest: 'dist',
   title: 'mpvue-weui',
   description: '基于 mpvue 的 weui 框架',
   head: [
@@ -57,8 +56,8 @@ module.exports = {
         collapsable: false,
         children: [
           'feedbackComponent/picker',
-          'feedbackComponent/cityPicker',
-          'feedbackComponent/datePicker',
+          'feedbackComponent/citypicker',
+          'feedbackComponent/datepicker',
           'feedbackComponent/actionsheet',
           'feedbackComponent/modal'
         ]
