@@ -10,7 +10,8 @@
 
 ## Mpvue-WeUI
 
-`Mpvue-WeUI`是基于 [mpvue](https://github.com/Meituan-Dianping/mpvue) 框架，同微信原生视觉体验一致的基础样式库，为微信小程序量身设计，令用户的使用感知更加统一。
+`Mpvue-WeUI`是基于 [mpvue](https://github.com/Meituan-Dianping/mpvue) 框架，保留了 weui 的视觉规范，旨在提高小程序开发体验，同时让用户的使用感知更加统一。
+
 
 ## 文档
 
