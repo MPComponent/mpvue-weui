@@ -1,5 +1,5 @@
 <template>
-  <page-content title="Badge" desc="徽章">
+  <page-content title="Badge" desc="徽章。">
     <div class="mb15">
       <div class="weui-article__h1">1.徽章--dot 靠右</div>
       <div class="weui-cells weui-cells_after-title">

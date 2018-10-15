@@ -7,7 +7,7 @@
 ### 引入
 
 ``` js
-import mpUploader from 'mpvue-weui/uploader';
+import mpUploader from 'mpvue-weui/src/uploader';
 export default {
   components: {
     mpUploader

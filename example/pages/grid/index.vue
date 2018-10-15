@@ -1,5 +1,5 @@
 <template>
-  <page-content title="Grid" desc="九宫格">
+  <page-content title="Grid" desc="九宫格。">
     <div class="grid-content">
       <mp-grid :gridData="gridData"></mp-grid>
     </div>

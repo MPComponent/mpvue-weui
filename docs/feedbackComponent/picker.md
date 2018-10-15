@@ -7,7 +7,7 @@
 ### 引入
 
 ``` js
-import mpPicker from 'mpvue-weui/picker';
+import mpPicker from 'mpvue-weui/src/picker';
 export default {
   components: {
     mpPicker,

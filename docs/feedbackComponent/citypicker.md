@@ -7,7 +7,7 @@
 ### 引入
 
 ``` js
-import mpCitypicker from 'mpvue-weui/city-picker';
+import mpCitypicker from 'mpvue-weui/src/city-picker';
 export default {
   components: {
     mpCitypicker,

@@ -7,7 +7,7 @@
 ### 引入
 
 ``` js
-import mpSlider from 'mpvue-weui/slider';
+import mpSlider from 'mpvue-weui/src/slider';
 export default {
   components: {
     mpSlider,

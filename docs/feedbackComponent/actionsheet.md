@@ -7,7 +7,7 @@
 ### 引入
 
 ``` js
-import mpActionsheet from 'mpvue-weui/actionsheet';
+import mpActionsheet from 'mpvue-weui/src/actionsheet';
 export default {
   components: {
     mpActionsheet,

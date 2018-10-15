@@ -7,7 +7,7 @@
 ### 引入
 
 ``` js
-import mpLoading from 'mpvue-weui/loading';
+import mpLoading from 'mpvue-weui/src/loading';
 export default {
   components: {
     mpLoading,

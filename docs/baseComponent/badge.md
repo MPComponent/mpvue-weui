@@ -7,7 +7,7 @@
 ### 引入
 
 ``` js
-import mpBadge from 'mpvue-weui/badge';
+import mpBadge from 'mpvue-weui/src/badge';
 export default {
   components: {
     mpBadge,

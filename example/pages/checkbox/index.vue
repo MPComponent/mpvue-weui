@@ -2,7 +2,7 @@
   <div class="page">
     <div class="page__hd">
       <div class="page__title">Checkbox</div>
-      <div class="page__desc">复选框</div>
+      <div class="page__desc">复选框，基于checkbox-group 和 checkbox 组件。</div>
     </div>
     <div class="page__bd page__bd_spacing">
       <div class="checkbox-demo-category">group-动物选择</div>

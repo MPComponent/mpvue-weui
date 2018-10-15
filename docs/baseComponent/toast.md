@@ -5,7 +5,7 @@
 <imgPreview imgUrl="/assets/toast.png"/>
 
 ``` js
-import mpToast from 'mpvue-weui/toast';
+import mpToast from 'mpvue-weui/src/toast';
 export default {
   components: {
     mpToast,

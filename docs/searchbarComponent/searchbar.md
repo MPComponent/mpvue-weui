@@ -7,7 +7,7 @@
 ### 引入
 
 ``` js
-import mpSearchbar from 'mpvue-weui/searchbar';
+import mpSearchbar from 'mpvue-weui/src/searchbar';
 export default {
   components: {
     mpSearchbar,
