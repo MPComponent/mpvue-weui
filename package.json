@@ -18,6 +18,7 @@
     "start": "node build/dev-server.js",
     "build": "node build/build.js",
     "docs": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
