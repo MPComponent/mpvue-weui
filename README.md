@@ -1,5 +1,5 @@
 <p align="center" style="text-align: center">
-  <a href="https://github.com/MPComponent/mpvue-weui">
+  <a href="https://mpcomponent.github.io/mpvue-weui/">
     <img width="300" :src="$withBase('/assets/logo.png')" alt="mpvue-weui logo">
   </a>
   <p align="center" style="text-align: center">
@@ -10,11 +10,11 @@
 
 ## Mpvue-WeUI
 
-`Mpvue-WeUI`是基于 `mpvue` 框架，同微信原生视觉体验一致的基础样式库，为微信小程序量身设计，令用户的使用感知更加统一。
-
-
+`Mpvue-WeUI`是基于 [mpvue](https://github.com/Meituan-Dianping/mpvue) 框架，同微信原生视觉体验一致的基础样式库，为微信小程序量身设计，令用户的使用感知更加统一。
 
 ## 文档
+
+[mpvue-weui 文档](https://mpcomponent.github.io/mpvue-weui/)
 
 ## 开发预览
 
