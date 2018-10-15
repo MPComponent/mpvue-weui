@@ -7,8 +7,8 @@ sidebarDepth: 0
     <img width="300" :src="$withBase('/assets/logo.png')" alt="mpvue-weui logo">
   </a>
   <p align="center" style="text-align: center">
-   <a href="https://www.npmjs.com/package/mpvue-weui"><img src="https://img.shields.io/npm/v/mpvue-weui.svg?style=flat" alt="npm"></a>
-   <a href="https://www.npmjs.com/package/mpvue-weui"><img src="https://img.shields.io/npm/dt/mpvue-weui.svg?style=flat" alt="npm"></a>
+   <a href="https://www.npmjs.com/package/mpvue-weui" target="_blank"><img src="https://img.shields.io/npm/v/mpvue-weui.svg?style=flat" alt="npm"></a>
+   <a href="https://www.npmjs.com/package/mpvue-weui" target="_blank"><img src="https://img.shields.io/npm/dt/mpvue-weui.svg?style=flat" alt="npm"></a>
  </p>
 </p>
 
