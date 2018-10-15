@@ -1,6 +1,6 @@
 <p align="center" style="text-align: center">
   <a href="https://github.com/MPComponent/mpvue-weui">
-    <img width="300" :src="$withBase('/assets/logo.png')" alt="mpvue-weui logo">
+    <img width="300" src="https://github.com/MPComponent/mpvue-weui/blob/master/docs/logo/logo.png" alt="mpvue-weui logo">
   </a>
   <p align="center" style="text-align: center">
    <a href="https://www.npmjs.com/package/mpvue-weui" target="_blank"><img src="https://img.shields.io/npm/v/mpvue-weui.svg?style=flat" alt="npm"></a>
@@ -10,11 +10,8 @@
 
 ## Mpvue-WeUI
 
-`Mpvue-WeUI`是基于 `mpvue` 框架，同微信原生视觉体验一致的基础样式库，为微信小程序量身设计，令用户的使用感知更加统一。
+`mpvue-weui` 是基于 `mpvue` 的一个小程序 UI 框架， 保留了 [weui](https://github.com/Tencent/weui) 的视觉规范，旨在提高小程序开发体验，同时让用户的使用感知更加统一。
 
-
-
-## 文档
 
 ## 开发预览
 
