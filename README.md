@@ -16,6 +16,35 @@
 
 [mpvue-weui 文档](https://mpcomponent.github.io/mpvue-weui/)
 
+## 安装
+
+``` bash
+npm install mpvue-weui --save  # cnpm install mpvue-weui --save
+
+```
+
+## 使用
+``` js
+/* 全局引入 weui.css (在 `src/main.js` 中引入 weui.css) */
+import 'mpvue-weui/src/style/weui.css';
+```
+``` vue
+<template>
+  <mp-button type="primary" size="large" btnClass="mb15">默认按钮</mp-button>
+</template>
+<script>
+  import mpButton from 'mpvue-weui/src/button';
+  export default {
+    components: {
+      mpButton,
+    },
+  }
+</script>
+```
+
+* 目前由于 `mpvue` 暂不支持全局安装组件，因此只能通过页面单独引入。
+* [更多组件](https://mpcomponent.github.io/mpvue-weui/)
+
 ## 开发预览
 
 ``` bash
