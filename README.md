@@ -1,5 +1,5 @@
 <p align="center" style="text-align: center">
-  <a href="https://github.com/MPComponent/mpvue-weui">
+  <a href="https://mpcomponent.github.io/mpvue-weui/">
     <img width="300" src="https://github.com/MPComponent/mpvue-weui/blob/master/docs/logo/logo.png" alt="mpvue-weui logo">
   </a>
   <p align="center" style="text-align: center">
@@ -10,8 +10,40 @@
 
 ## Mpvue-WeUI
 
-`mpvue-weui` 是基于 `mpvue` 的一个小程序 UI 框架， 保留了 [weui](https://github.com/Tencent/weui) 的视觉规范，旨在提高小程序开发体验，同时让用户的使用感知更加统一。
+`Mpvue-WeUI`是基于 [mpvue](https://github.com/Meituan-Dianping/mpvue) 的一个小程序 UI 框架， 保留了 [weui](https://weui.io/) 的视觉规范，旨在提高小程序开发体验，同时让用户的使用感知更加统一。
 
+## 文档
+
+[mpvue-weui 文档](https://mpcomponent.github.io/mpvue-weui/)
+
+## 安装
+
+``` bash
+npm install mpvue-weui --save  # cnpm install mpvue-weui --save
+
+```
+
+## 使用
+``` js
+/* 全局引入 weui.css (在 `src/main.js` 中引入 weui.css) */
+import 'mpvue-weui/src/style/weui.css';
+```
+``` vue
+<template>
+  <mp-button type="primary" size="large" btnClass="mb15">默认按钮</mp-button>
+</template>
+<script>
+  import mpButton from 'mpvue-weui/src/button';
+  export default {
+    components: {
+      mpButton,
+    },
+  }
+</script>
+```
+
+* 目前由于 `mpvue` 暂不支持全局安装组件，因此只能通过页面单独引入。
+* [更多组件](https://mpcomponent.github.io/mpvue-weui/)
 
 ## 开发预览
 
