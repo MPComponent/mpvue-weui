@@ -10,7 +10,7 @@
 
 ## Mpvue-WeUI
 
-`Mpvue-WeUI`是基于 [mpvue](https://github.com/Meituan-Dianping/mpvue) 的一个小程序 UI 框架， 保留了 weui 的视觉规范，旨在提高小程序开发体验，同时让用户的使用感知更加统一。
+`Mpvue-WeUI`是基于 [mpvue](https://github.com/Meituan-Dianping/mpvue) 的一个小程序 UI 框架， 保留了 [weui](https://weui.io/) 的视觉规范，旨在提高小程序开发体验，同时让用户的使用感知更加统一。
 
 ## 文档
 
