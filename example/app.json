@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/logo/main",
     "pages/index/main",
     "pages/button/main",
     "pages/slider/main",
