@@ -16,6 +16,12 @@
 
 [mpvue-weui 文档](https://mpcomponent.github.io/mpvue-weui/)
 
+
+## 扫码体验
+
+<img src="https://user-images.githubusercontent.com/20694238/47097108-453cae00-d263-11e8-9cd6-5c7c41ad0678.jpg" width="200">
+
+
 ## 安装
 
 ``` bash
