@@ -12,6 +12,8 @@ sidebarDepth: 0
  </p>
 </p>
 
+<imgPreview imgUrl="/assets/mpvue-weui-qrcode.png"/>
+
 ## Mpvue-WeUI
 
 `Mpvue-WeUI`是基于 `mpvue` 框架，同微信原生视觉体验一致的基础样式库，为微信小程序量身设计，令用户的使用感知更加统一。
