@@ -3,6 +3,7 @@
     <img width="300" src="https://github.com/MPComponent/mpvue-weui/blob/master/docs/logo/logo.png" alt="mpvue-weui logo">
   </a>
   <p align="center" style="text-align: center">
+   <a href="https://circleci.com/gh/MPComponent/mpvue-weui" target="_blank"><img src="https://img.shields.io/circleci/project/github/MPComponent/mpvue-weui/dev.svg"></a>
    <a href="https://www.npmjs.com/package/mpvue-weui" target="_blank"><img src="https://img.shields.io/npm/v/mpvue-weui.svg?style=flat" alt="npm"></a>
    <a href="https://www.npmjs.com/package/mpvue-weui" target="_blank"><img src="https://img.shields.io/npm/dt/mpvue-weui.svg?style=flat" alt="npm"></a>
  </p>
