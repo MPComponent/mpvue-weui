@@ -1,6 +1,6 @@
 <template>
   <page-content title="SearchBar" desc="搜索栏">
-    <mp-searchbar :isFocus=true :inputValue="inputValue" :placeholder="placeholder" @input="input" @blur="blur" @focus="focus" @confirm="confirm"></mp-searchbar>
+    <mp-searchbar :isFocus=true v-model="inputValue" :placeholder="placeholder" @on-input="input" @blur="blur" @focus="focus" @confirm="confirm"></mp-searchbar>
   </page-content>
 </template>
 
@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     input(e) {
-      console.log('input:' + e.mp.detail.value);
+      console.log('on-input:' + e.mp.detail.value);
     },
     blur(e) {
       console.log('blur[value]:' + e.mp.detail.value);

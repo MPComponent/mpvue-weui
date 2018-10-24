@@ -21,11 +21,12 @@
 export default {
   data() {
     return {
+      inputValue: this.value
     };
   },
   props: {
-    inputValue: {
-      type: String,
+    value: {
+      type: [String, Number],
       default: ''
     },
     isFocus: {
@@ -41,6 +42,14 @@ export default {
       default: 'done'
     }
   },
+  watch: {
+    value(val) {
+      this.inputValue = val;
+    },
+    inputValue(val) {
+      this.$emit('input', val);
+    }
+  },
   methods: {
     showInput() {
       this.isFocus = true;
@@ -54,7 +63,7 @@ export default {
     },
     /* 键盘输入时触发 */
     input(e) {
-      this.$emit('input', e);
+      this.$emit('on-input', e);
     },
     /* 输入框失去焦点时触发 */
     blur(e) {
