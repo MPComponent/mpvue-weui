@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/searchbar/main",
     "pages/index/main",
     "pages/button/main",
     "pages/slider/main",
@@ -17,8 +16,8 @@
     "pages/date-picker/main",
     "pages/actionsheet/main",
     "pages/modal/main",
-    "pages/navbar/main"
-    
+    "pages/navbar/main",
+    "pages/searchbar/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
