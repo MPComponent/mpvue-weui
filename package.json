@@ -22,7 +22,7 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
-    "mpvue": "^1.0.11"
+    "mpvue": "^1.0.16"
   },
   "devDependencies": {
     "babel-core": "^6.22.1",
@@ -55,7 +55,7 @@
     "html-webpack-plugin": "^3.2.0",
     "http-proxy-middleware": "^0.18.0",
     "mpvue-loader": "^1.1.2",
-    "mpvue-template-compiler": "^1.0.11",
+    "mpvue-template-compiler": "^1.0.16",
     "mpvue-webpack-target": "^1.0.0",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^2.0.0",
