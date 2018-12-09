@@ -321,7 +321,7 @@ export default {
       } else if (mode === 'timeSelector') {
         pickerLable = `${this.pickerValueHour[value[0]].label}-${this.pickerValueMinute[value[1]].label}`;
         pickerGetValue.push(this.pickerValueHour[value[0]].value);
-        pickerGetValue.push(this.pickerValueHour[value[1]].value);
+        pickerGetValue.push(this.pickerValueMinute[value[1]].value);
       } else if (mode === 'multiSelector') {
         for (let i = 0; i < value.length; i++) {
           if (i > 0) {
