@@ -26,6 +26,9 @@
         </div>
       </div>
     </div>
+    <div class="page__footer page__bd_spacing">
+      <ad unit-id="adunit-96daa96769132eea"></ad>
+    </div>
   </div>
 </template>
 
@@ -161,5 +164,8 @@ export default {
 
 .kind-list__item-bd_show {
   height: auto;
+}
+.page__footer {
+  margin-bottom: 20px;
 }
 </style>
