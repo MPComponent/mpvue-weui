@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/input/main",
     "pages/index/main",
     "pages/button/main",
     "pages/slider/main",
