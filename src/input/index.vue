@@ -1,10 +1,8 @@
 <template>
-  <div class="weui-input-content">
     <input class="weui-input" :value="inputValue" @input="input" @focus="focus" :type="type" :password="password" @blur="blur" @confirm="confirm"
     :placeholder="placeholder" :placeholder-style="placeholderStyle" :placeholder-class="placeholderClass" 
     :disabled="disabled" :maxlength="maxlength" :cursor-spacing="cursorSpacing" :focus="focus" :confirm-type="confirmType"
     :confirm-hold="confirmHold" :adjust-position="adjustPosition" />
-  </div>
 </template>
 
 <script>
