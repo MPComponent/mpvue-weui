@@ -7,7 +7,7 @@
       </div>
       <div class="weui-cells__title">控制最大输入长度的 input</div>
       <div class="weui-cells weui-cells_after-title">
-        <mp-input placeholder="最大输入长度为10" :maxlength=10></mp-input>
+        <mp-input placeholder="最大输入长度为10" :maxlength=10 :focus=true></mp-input>
       </div>
       <div class="weui-cells__title">数字输入的 input</div>
       <div class="weui-cells weui-cells_after-title">
@@ -29,26 +29,40 @@
       <div class="weui-cells weui-cells_after-title">
         <mp-input placeholder="占位符字体为红色" placeholderStyle="color: red"></mp-input>
       </div>
+      <div class="weui-cells__title">获取焦点的 input</div>
+      <mp-button @click="getInputFocus" size="small" type="primary"  btnClass="autoBtnClass">点击获取焦点</mp-button>
+      <div class="weui-cells weui-cells_after-title">
+        <mp-input placeholder="获取焦点" :focus="autoFocus" @blur="inputBlur"></mp-input>
+      </div>
     </page-content>
   </div>
 </template>
 
 <script>
 import mpInput from '../../../src/input';
+import mpButton from '../../../src/button';
 import pageContent from '../../components/page-content';
 export default {
   data() {
     return {
-      inputValue: ''
+      inputValue: '',
+      autoFocus: false
     };
   },
   components: {
     mpInput,
-    pageContent
+    pageContent,
+    mpButton
   },
   methods: {
+    getInputFocus() {
+      this.autoFocus = true;
+    },
     inputFocus(value) {
       console.log(`focus:${value}`);
+    },
+    inputBlur(value) {
+      this.autoFocus = false;
     },
     blur(value) {
       console.log(`blur:${value}`);
@@ -69,5 +83,8 @@ export default {
 }
 .weui-cells {
   padding: 0 30rpx;
+}
+.autoBtnClass {
+  margin: 15rpx;
 }
 </style>
