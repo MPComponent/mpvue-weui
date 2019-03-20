@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/input/main",
     "pages/index/main",
+    "pages/input/main",
     "pages/button/main",
     "pages/slider/main",
     "pages/uploader/main",

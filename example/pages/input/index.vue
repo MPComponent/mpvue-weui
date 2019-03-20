@@ -7,7 +7,7 @@
       </div>
       <div class="weui-cells__title">控制最大输入长度的 input</div>
       <div class="weui-cells weui-cells_after-title">
-        <mp-input placeholder="最大输入长度为10" :maxlength=10 :focus=true></mp-input>
+        <mp-input placeholder="最大输入长度为10" :maxlength=10></mp-input>
       </div>
       <div class="weui-cells__title">数字输入的 input</div>
       <div class="weui-cells weui-cells_after-title">
