@@ -1,6 +1,6 @@
 {
   "name": "mpvue-weui",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "mpvue-weui, 基于 mpvue 的 weui 框架",
   "main": "src/",
   "author": "KuangPF <1633397286@qq.com>",
