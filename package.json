@@ -1,6 +1,6 @@
 {
   "name": "mpvue-weui",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "mpvue-weui, 基于 mpvue 的 weui 框架",
   "main": "src/",
   "author": "KuangPF <1633397286@qq.com>",
@@ -19,6 +19,7 @@
     "build": "node build/build.js",
     "docs": "vuepress dev docs",
     "docs:build": "vuepress build docs",
+    "deploy": "sh deploy.sh",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
