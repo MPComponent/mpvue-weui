@@ -40,14 +40,22 @@ export default {
   },
   props: {
     defaultDate: {
-      type: Array,
+      type: [Array, Date],
       default: []
     }
   },
   created() {
-    let year = this.defaultDate.length > 0 ? this.defaultDate[0] : NOW_DATE.getFullYear();
-    let month = this.defaultDate.length > 0 ? this.defaultDate[1] - 1 : NOW_DATE.getMonth();
-    let day = this.defaultDate.length > 0 ? this.defaultDate[2] : NOW_DATE.getDate();
+    let year, month, day;
+    // 支持传入 Date 对象
+    if (Object.prototype.toString.call(this.defaultDate) === '[object Date]' && !isNaN(this.defaultDate.getTime())) {
+      year = this.defaultDate.getFullYear();
+      month = this.defaultDate.getMonth();
+      day = this.defaultDate.getDate();
+    } else {
+      year = this.defaultDate.length > 0 ? this.defaultDate[0] : NOW_DATE.getFullYear();
+      month = this.defaultDate.length > 0 ? this.defaultDate[1] - 1 : NOW_DATE.getMonth();
+      day = this.defaultDate.length > 0 ? this.defaultDate[2] : NOW_DATE.getDate();
+    }
     this.initDateList(year, month, day);
   },
   methods: {
@@ -168,7 +176,7 @@ export default {
   font-size: 17px;
 }
 .mpvue-picker__hd:after {
-  content: ' ';
+  content: " ";
   position: absolute;
   left: 0;
   bottom: 0;

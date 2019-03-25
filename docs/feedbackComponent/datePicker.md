@@ -28,7 +28,11 @@ this.$refs.mpDatePicker.show();
 
 | 参数 | 说明 | 类型 | 默认值 |
 |-----------|-----------|-----------|-------------|
-| defaultDate | 设置初始化日期，默认为当天 | `Array` | `[]` |
+| defaultDate | 设置初始化日期，默认为当天 | `Array,Date` | 当天日期 |
+
+::: tip Date 类型支持
+`defaultDate` Date 类型从 1.0.6 版本支持。
+:::
 
 ### Event
 
