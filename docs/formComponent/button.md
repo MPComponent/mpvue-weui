@@ -26,7 +26,7 @@ export default {
 
 | 参数 | 说明 | 类型 | 默认值 |
 |-----------|-----------|-----------|-------------|
-| type | 按钮类型，可选值为 `primary` `warning` `default` | `String` | `default` |
+| type | 按钮类型，可选值为 `primary` `warn` `default` | `String` | `default` |
 | size | 按钮尺寸，可选值为 `normal` `large` `small` `mini` | `String` | `normal` |
 | plain | 是否为朴素按钮 | `Boolean` | `false` |
 | disabled | 是否禁用 | `Boolean` | `false` |
