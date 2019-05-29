@@ -23,7 +23,9 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
-    "mpvue": "1.0.18"
+    "mpvue": "1.0.18",
+    "mpvue-citypicker": "^1.0.3",
+    "mpvue-picker": "^2.1.1"
   },
   "devDependencies": {
     "babel-core": "^6.22.1",
