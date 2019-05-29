@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "mpvue": "1.0.18",
-    "mpvue-citypicker": "^1.0.3",
+    "mpvue-citypicker": "1.0.4",
     "mpvue-picker": "^2.1.1"
   },
   "devDependencies": {

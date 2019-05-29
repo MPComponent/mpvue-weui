@@ -6395,10 +6395,10 @@ move-concurrently@^1.0.1:
     rimraf "^2.5.4"
     run-queue "^1.0.3"
 
-mpvue-citypicker@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.npm.taobao.org/mpvue-citypicker/download/mpvue-citypicker-1.0.3.tgz#044471ddeede8c2a371974febde37ec75dd4a7ce"
-  integrity sha1-BERx3e7ejCo3GXT+veN+x13Up84=
+mpvue-citypicker@1.0.4:
+  version "1.0.4"
+  resolved "https://registry.npmjs.org/mpvue-citypicker/-/mpvue-citypicker-1.0.4.tgz#d04ada90481d64d2c714a4c0d0de0c9ecfea3004"
+  integrity sha512-zIMm8V6SI+9CwT/SI3PWVPOHY5fTLdpSADbu7FfZjQD+uS41Hm/DJfqm6AZCLwIQyU2n0PV/L3JmMVeskjRSag==
   dependencies:
     mpvue "1.0.18"
 
