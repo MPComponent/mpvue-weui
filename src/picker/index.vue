@@ -1,5 +1,5 @@
 <template>
-  <mpvue-picker ref="mpvuePicker" :mode="mode" :pickerValueArray="pickerValueArray" :pickerValueDefault="pickerValueDefault" :deepLength="deepLength" :themeColor="themeColor"></mpvue-picker>
+  <mpvue-picker ref="mpvuePicker" :mode="mode" :pickerValueArray="pickerValueArray" :pickerValueDefault="pickerValueDefault" :deepLength="deepLength" :themeColor="themeColor" @onChange="onChange" @onConfirm="onConfirm" @onCancel="onCancel"></mpvue-picker>
 </template>
 
 <script>
@@ -39,6 +39,15 @@ export default {
   methods: {
     show() {
       this.$refs.mpvuePicker.show();
+    },
+    onChange(e) {
+      this.$emit('onChange', e);
+    },
+    onConfirm(e) {
+      this.$emit('onConfirm', e);
+    },
+    onCancel(e) {
+      this.$emit('onCancel', e);
     }
   }
 };
