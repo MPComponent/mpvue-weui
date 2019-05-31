@@ -18,8 +18,8 @@ import pageContent from '../../components/page-content';
 export default {
   data() {
     return {
-      defaultDate: new Date('2019-3-24'),
-      // defaultDate: [2019, 2, 25],
+      // defaultDate: new Date('2019-3-24'),
+      defaultDate: [2019, 2, 25],
       datePickerObj: {}
     };
   },
