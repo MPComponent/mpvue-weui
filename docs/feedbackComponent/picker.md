@@ -109,6 +109,7 @@ this.$refs.mpPicker.show();
 | 参数 | 说明 | 类型 | 默认值 |
 |-----------|-----------|-----------|-------------|
 | mode | picker 组件类型  | `String` | `selector` |
+| themeColor | 主题颜色  | `String` | `#1aad19` |
 | pickerValueArray | picker 渲染数据 | `Array` | `-` |
 | pickerValueDefault | picker 默认选中值  | `Array` | `[]` |
 | deepLength | 几级联动 | `Number` | `2` |
@@ -122,6 +123,9 @@ this.$refs.mpPicker.show();
     * timeSelector（时间选择）
     * multiSelector（多列） 
     * multiLinkageSelector（级联）
+* 是否必填： 否
+
+#### themeColor
 * 是否必填： 否
 
 #### pickerValueArray

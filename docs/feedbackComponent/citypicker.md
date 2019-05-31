@@ -29,6 +29,7 @@ this.$refs.mpCityPicker.show();
 | 参数 | 说明 | 类型 | 默认值 |
 |-----------|-----------|-----------|-------------|
 | pickerValueDefault | 设置默认城市  | `Array` | `[0, 0, 0]` |
+| themeColor | 主题颜色  | `String` | `#1aad19` |
 
 ### Event
 

@@ -3,7 +3,7 @@
     <page-content title="datepicker" desc="日期选择器，基于 picker 组件进行封装。">
       <div class="mpvue-date-picker">
         <button type="default" @click="showDatePicker">日期选择</button>
-        <mp-datepicker ref="mpDatePicker" :defaultDate="defaultDate" @onChange="onChange" @onConfirm="onConfirm" @onCancel="onCancel"></mp-datepicker>
+        <mp-datepicker ref="mpDatePicker" :themeColor="themeColor" :defaultDate="defaultDate" @onChange="onChange" @onConfirm="onConfirm" @onCancel="onCancel"></mp-datepicker>
       </div>
     </page-content>
     <div class="picker-text-content">
@@ -20,6 +20,7 @@ export default {
     return {
       defaultDate: new Date('2019-3-24'),
       // defaultDate: [2019, 2, 25],
+      themeColor: '#2B7489',
       datePickerObj: {}
     };
   },

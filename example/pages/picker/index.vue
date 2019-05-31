@@ -10,7 +10,7 @@
         <button type="default" @click="showMulLinkageTwoPicker">二级联动选择</button>
         <button type="default" @click="showMulLinkageThreePicker">三级联动选择</button>
       </div>
-      <mp-picker ref="mpvuePicker" :mode="mode" :deepLength=deepLength :pickerValueDefault="pickerValueDefault" @onChange="onChange" @onConfirm="onConfirm" @onCancel="onCancel" :pickerValueArray="pickerValueArray"></mp-picker>
+      <mp-picker ref="mpvuePicker" :mode="mode" :themeColor="themeColor" :deepLength=deepLength :pickerValueDefault="pickerValueDefault" @onChange="onChange" @onConfirm="onConfirm" @onCancel="onCancel" :pickerValueArray="pickerValueArray"></mp-picker>
     </div>
   </page-content>
 
@@ -33,6 +33,7 @@ export default {
       deepLength: 0, // 几级联动
       pickerValueDefault: [], // 初始化值
       pickerValueArray: [], // picker 数组值
+      themeColor: '#1aad19',
       pickerSingleArray: [
         {
           label: '住宿费',
@@ -223,12 +224,14 @@ export default {
       this.pickerValueArray = this.pickerSingleArray;
       this.mode = 'selector';
       this.pickerValueDefault = [];
+      this.themeColor = '#247FF6';
       this.$refs.mpvuePicker.show();
     },
     // 时间选择
     showTimePicker() {
       this.mode = 'timeSelector';
       this.pickerValueDefault = [1, 2];
+      this.themeColor = '#8D0177';
       this.$refs.mpvuePicker.show();
     },
     // 多列选择
@@ -236,6 +239,7 @@ export default {
       this.pickerValueArray = this.pickerMulArray;
       this.mode = 'multiSelector';
       this.pickerValueDefault = [1, 1, 1];
+      this.themeColor = '';
       this.$refs.mpvuePicker.show();
     },
     // 二级联动选择
@@ -244,6 +248,7 @@ export default {
       this.mode = 'multiLinkageSelector';
       this.deepLength = 2;
       this.pickerValueDefault = [1, 0];
+      this.themeColor = '#8D0177';
       this.$refs.mpvuePicker.show();
     },
     // 三级联动选择
@@ -252,6 +257,7 @@ export default {
       this.mode = 'multiLinkageSelector';
       this.deepLength = 3;
       this.pickerValueDefault = [1, 1, 1];
+      this.themeColor = '#8D0177';
       this.$refs.mpvuePicker.show();
     },
     showPickerView() {
