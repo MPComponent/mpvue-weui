@@ -3,25 +3,26 @@
     <div class="weui-search-bar__form">
       <div class="weui-search-bar__box">
         <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-        <input type="text" class="weui-search-bar__input" :placeholder="placeholder" v-model="inputValue" :focus="isFocus" :confirm-type="confirmType" @input="input" @blur="blur" @focus="focus" @confirm="confirm" />
+        <input type="text" class="weui-search-bar__input" :placeholder="placeholder" v-model="inputValue" :focus="isFocusData" :confirm-type="confirmType" @input="input" @blur="blur" @focus="focus" @confirm="confirm" />
         <div class="weui-icon-clear" v-if="inputValue.length > 0" @click="clearInput">
           <icon type="clear" size="14"></icon>
         </div>
       </div>
-      <label class="weui-search-bar__label" :hidden="isFocus" @click="showInput">
+      <label class="weui-search-bar__label" :hidden="isFocusData" @click="showInput">
         <icon class="weui-icon-search" type="search" size="14"></icon>
         <div class="weui-search-bar__text">搜索</div>
       </label>
     </div>
-    <div class="weui-search-bar__cancel-btn" :hidden="!isFocus" @click="hideInput">取消</div>
+    <div class="weui-search-bar__cancel-btn" :hidden="!isFocusData" @click="hideInput">取消</div>
   </div>
 </template>
-
+ß
 <script>
 export default {
   data() {
     return {
-      inputValue: this.value
+      inputValue: this.value,
+      isFocusData: this.isFocus
     };
   },
   props: {
@@ -52,11 +53,11 @@ export default {
   },
   methods: {
     showInput() {
-      this.isFocus = true;
+      this.isFocusData = true;
     },
     hideInput() {
       this.inputValue = '';
-      this.isFocus = false;
+      this.isFocusData = false;
     },
     clearInput() {
       this.inputValue = '';
