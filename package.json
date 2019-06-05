@@ -1,6 +1,6 @@
 {
   "name": "mpvue-weui",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "mpvue-weui, 基于 mpvue 的 weui 框架",
   "main": "src/",
   "author": "KuangPF <1633397286@qq.com>",
@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "mpvue": "1.0.18",
-    "mpvue-citypicker": "1.0.4",
+    "mpvue-citypicker": "^1.0.5",
     "mpvue-picker": "^2.1.1"
   },
   "devDependencies": {
