@@ -97,6 +97,9 @@ export default {
         files: this.files
       };
       this.$emit('uploadDelete', uploadDeleteObj);
+    },
+    clearFiles() {
+      this.files = [];
     }
   }
 };
