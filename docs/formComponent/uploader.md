@@ -23,11 +23,13 @@ export default {
 
 ### API
 
-| 参数      | 说明                     | 类型      | 默认值  |
-| --------- | ------------------------ | --------- | ------- |
-| maxLength | 最多能上传图片的张数     | `Number`  | `20`    |
-| showTip   | 是否显示图片上传剩余张数 | `Boolean` | `false` |
-| count     | 最多可以选择的图片张数   | `Number`  | `9`     |
+| 参数		       | 说明                  | 类型      | 默认值  |
+| ---------			| ----------------------| ---------| ------- |
+| maxLength			| 最多能上传图片的张数     | `Number` | `20`    |
+| showTip			| 是否显示图片上传剩余张数 | `Boolean` | `false` |
+| count				| 最多可以选择的图片张数   | `Number` | `9`     |
+| isMaxHiddenChoose	| 是否在最大上传数时隐藏选择按钮| `Boolean` | `false` |
+
 
 ### Event
 
