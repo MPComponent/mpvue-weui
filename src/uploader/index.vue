@@ -13,7 +13,7 @@
           </div>
         </div>
       </div>
-      <div class="weui-uploader__input-box">
+      <div class="weui-uploader__input-box" v-show="!isMaxHiddenChoose || (files.length < maxLength)">
         <div class="weui-uploader__input" @click="chooseImage"></div>
       </div>
     </div>
@@ -39,6 +39,10 @@ export default {
     count: {
       type: Number,
       default: 9
+    },
+    isMaxHiddenChoose: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
