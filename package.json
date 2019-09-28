@@ -20,7 +20,8 @@
     "docs": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "deploy": "sh deploy.sh",
-    "lint": "eslint --ext .js,.vue src"
+    "lint": "eslint --ext .js,.vue src",
+    "release": "sh ./release.sh"
   },
   "dependencies": {
     "mpvue-citypicker": "^1.0.6",
