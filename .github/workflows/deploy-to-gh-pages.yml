@@ -2,13 +2,13 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master
+      - dev
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@dev
 
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@master
