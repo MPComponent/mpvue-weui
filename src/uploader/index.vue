@@ -8,12 +8,21 @@
       <div class="weui-uploader__files" id="uploaderFiles">
         <div v-for="(item ,index) in files" :key="index">
           <div class="weui-uploader__file">
-            <image class="weui-uploader__img" :src="item" mode="aspectFill" @click="predivImage" :id="item" />
+            <image
+              class="weui-uploader__img"
+              :src="item"
+              mode="aspectFill"
+              @click="predivImage"
+              :id="item"
+            />
             <div class="delete-icon" @click="deleteImg" :id="item" :data-index="index" :key="index"></div>
           </div>
         </div>
       </div>
-      <div class="weui-uploader__input-box" v-show="!isMaxHiddenChoose || (files.length < maxLength)">
+      <div
+        class="weui-uploader__input-box"
+        v-show="!isMaxHiddenChoose || (files.length < maxLength)"
+      >
         <div class="weui-uploader__input" @click="chooseImage"></div>
       </div>
     </div>
@@ -24,7 +33,7 @@
 export default {
   data() {
     return {
-      files: []
+      files: this.initialFileList.slice(0, this.maxLength)
     };
   },
   props: {
@@ -43,6 +52,10 @@ export default {
     isMaxHiddenChoose: {
       type: Boolean,
       default: false
+    },
+    initialFileList: {
+      type: Array,
+      default: () => []
     }
   },
   methods: {
@@ -127,7 +140,7 @@ export default {
   z-index: 5;
 }
 .delete-icon::before {
-  content: '';
+  content: "";
   width: 26rpx;
   height: 4rpx;
   position: absolute;

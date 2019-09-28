@@ -18,7 +18,8 @@
     "pages/actionsheet/main",
     "pages/modal/main",
     "pages/navbar/main",
-    "pages/searchbar/main"
+    "pages/searchbar/main",
+    "pages/test/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
