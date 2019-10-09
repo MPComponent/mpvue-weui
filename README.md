@@ -26,8 +26,11 @@
 ## 安装
 
 ``` bash
-npm install mpvue-weui --save  # cnpm install mpvue-weui --save
-
+npm install mpvue-weui
+```
+or
+``` bash
+yarn add mpvue-weui
 ```
 
 ## 使用
