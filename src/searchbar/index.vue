@@ -34,6 +34,10 @@ export default {
       type: Boolean,
       default: false
     },
+    inputFocus: {
+      type: Boolean,
+      default: false
+    },
     placeholder: {
       type: String,
       default: '搜索'
@@ -53,10 +57,12 @@ export default {
   },
   methods: {
     showInput() {
+      this.inputFocus = true;
       this.isFocusData = true;
     },
     hideInput() {
       this.inputValue = '';
+      this.inputFocus = true;
       this.isFocusData = false;
     },
     clearInput() {
@@ -76,6 +82,7 @@ export default {
     },
     /* 点击完成时触发 */
     confirm(e) {
+      this.inputFocus = false;
       this.$emit('confirm', e);
     }
   }
